@@ -1,0 +1,12 @@
+MAPAS DA SEMANA
+===============
+
+Coloque aqui os PDFs e as pré-visualizações de cada mapa, por exemplo:
+
+  mapa-semana-01.pdf
+  mapa-semana-01.jpg   (pré-visualização, proporção 4:3)
+
+Depois preencha, em src/data/course.ts, os campos da semana:
+
+  pdfHref: "/assets/mapas/mapa-semana-01.pdf",
+  previewSrc: "/assets/mapas/mapa-semana-01.jpg",

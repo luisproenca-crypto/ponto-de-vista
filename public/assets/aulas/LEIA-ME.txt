@@ -1,0 +1,11 @@
+IMAGENS DAS AULAS
+=================
+
+Arquivos esperados pela Aula 01 (Semana 01):
+
+  aula01-olhar-paco.jpg  -> imagem de observação (paisagem urbana ilustrativa)
+  cinco-lentes.jpg       -> representação visual das cinco lentes
+
+Formato sugerido: JPG 16:9, largura 1600px.
+O caminho de cada imagem é definido em:
+  src/data/lessons/semana-01-aula-01.ts

@@ -1,0 +1,6 @@
+FOTOS DA EQUIPE
+===============
+
+  prof-luis.jpg  -> foto do Prof. Luis usada no hero da home (proporção 4:5)
+
+O caminho é definido em src/data/site.ts (brandImages.profLuis).

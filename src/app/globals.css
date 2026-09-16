@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==================================================================
+   PONTO DE VISTA — estilos base
+   ================================================================== */
+
+@layer base {
+  :root {
+    --pdv-roxo: #5b2a86;
+    --pdv-verde: #2bb673;
+    --pdv-laranja: #f28c28;
+    --pdv-grafite: #121212;
+    --pdv-cinza: #eaeaea;
+    --pdv-creme: #fbf8f3;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: var(--pdv-grafite);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Foco sempre visível, em qualquer fundo. */
+  :focus-visible {
+    outline: 3px solid var(--pdv-laranja);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background-color: rgba(91, 42, 134, 0.16);
+  }
+}
+
+@layer components {
+  /* Link "pular para o conteúdo" (acessibilidade por teclado). */
+  .skip-link {
+    @apply sr-only;
+  }
+  .skip-link:focus {
+    @apply not-sr-only fixed left-4 top-4 z-[100] rounded-md bg-roxo px-4 py-3 text-sm font-semibold text-white shadow-cartao;
+  }
+
+  /* Cartão padrão do sistema visual. */
+  .pdv-card {
+    @apply rounded-card border border-cinza bg-white shadow-suave;
+  }
+
+  /* Etiqueta em caixa-alta com espaçamento largo (estética de atlas). */
+  .pdv-eyebrow {
+    @apply font-mono text-[11px] font-semibold uppercase tracking-[0.18em];
+  }
+
+  /* Coordenada decorativa. */
+  .pdv-coord {
+    @apply font-mono text-[11px] uppercase tracking-[0.16em] text-cinza-medio;
+  }
+}
+
+@layer utilities {
+  /* Linhas topográficas discretas usadas em áreas editoriais. */
+  .bg-topografia {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Cg fill='none' stroke='%235B2A86' stroke-opacity='0.08' stroke-width='1'%3E%3Cpath d='M-20 50 C 60 10 180 90 320 44'/%3E%3Cpath d='M-20 80 C 60 40 180 120 320 74'/%3E%3Cpath d='M-20 110 C 60 70 180 150 320 104'/%3E%3Cpath d='M-20 150 C 70 120 170 196 320 150'/%3E%3Cpath d='M-20 190 C 70 160 170 236 320 190'/%3E%3Cpath d='M-20 230 C 70 200 170 276 320 230'/%3E%3Cpath d='M-20 270 C 70 240 170 316 320 270'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 300px 300px;
+  }
+
+  .bg-topografia-clara {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Cg fill='none' stroke='%23FFFFFF' stroke-opacity='0.10' stroke-width='1'%3E%3Cpath d='M-20 50 C 60 10 180 90 320 44'/%3E%3Cpath d='M-20 90 C 60 50 180 130 320 84'/%3E%3Cpath d='M-20 130 C 60 90 180 170 320 124'/%3E%3Cpath d='M-20 170 C 70 140 170 216 320 170'/%3E%3Cpath d='M-20 210 C 70 180 170 256 320 210'/%3E%3Cpath d='M-20 250 C 70 220 170 296 320 250'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 300px 300px;
+  }
+
+  /* Malha de coordenadas muito sutil. */
+  .bg-malha {
+    background-image:
+      linear-gradient(to right, rgba(18, 18, 18, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(18, 18, 18, 0.05) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  /* Rota pontilhada da trilha. */
+  .rota-vertical {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(91, 42, 134, 0.35) 0 8px,
+      transparent 8px 16px
+    );
+    background-size: 2px 16px;
+    background-repeat: repeat-y;
+  }
+
+  .rota-horizontal {
+    background-image: linear-gradient(
+      to right,
+      rgba(91, 42, 134, 0.35) 0 8px,
+      transparent 8px 16px
+    );
+    background-size: 16px 2px;
+    background-repeat: repeat-x;
+  }
+
+  /* Atrasos usados nas animações de entrada. */
+  .delay-1 {
+    animation-delay: 70ms;
+  }
+  .delay-2 {
+    animation-delay: 140ms;
+  }
+  .delay-3 {
+    animation-delay: 210ms;
+  }
+  .delay-4 {
+    animation-delay: 280ms;
+  }
+}
+
+/* Respeita a preferência do sistema por menos movimento. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Impressão: tira fundos pesados e mostra a URL dos links. */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

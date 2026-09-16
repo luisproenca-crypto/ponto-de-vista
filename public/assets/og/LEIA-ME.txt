@@ -1,0 +1,7 @@
+IMAGEM DE COMPARTILHAMENTO (OPEN GRAPH)
+=======================================
+
+  og-ponto-de-vista.png  -> 1200x630px
+
+Usada quando o link do site é compartilhado no WhatsApp, Instagram etc.
+O caminho é definido em src/app/layout.tsx (metadata.openGraph.images).

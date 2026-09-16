@@ -1,0 +1,6 @@
+MATERIAIS DE APOIO
+==================
+
+PDFs, listas e demais arquivos vinculados às aulas.
+Depois de enviar um arquivo aqui, adicione-o ao array `resources` da aula,
+em src/data/course.ts, preenchendo o campo `href`.

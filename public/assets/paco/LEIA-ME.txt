@@ -1,0 +1,16 @@
+IMAGENS DO PROFESSOR PACO
+=========================
+
+Coloque aqui as artes já existentes do Paco (Parasaurolophus de pele verde,
+faixas roxas, chapéu marrom de explorador com bússola e mochila).
+
+Nomes esperados pelo site (PNG com fundo transparente, ~800x800px):
+
+  paco-explorador.png   -> home, "Comece Aqui"
+  paco-lupa.png         -> bloco "O olhar do Paco", página 404
+  paco-estudando.png    -> página Comunidade
+  paco-checkpoint.png   -> celebração ao concluir aula, Checkpoints
+  paco-trilha.png       -> home (chamada final) e Trilha de Estudos
+
+Enquanto os arquivos não existirem, o site mostra um placeholder elegante
+com o texto "Imagem do Professor Paco" — nenhum layout quebra.
