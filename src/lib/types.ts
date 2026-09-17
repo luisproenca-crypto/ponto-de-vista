@@ -89,6 +89,98 @@ export interface ConceptDetail {
   naProva: string | null;
 }
 
+/** Cartão selecionável do bloco de hipótese (provocação inicial). */
+export interface HypothesisCard {
+  id: string;
+  label: string;
+}
+
+/**
+ * Bloco de provocação/hipótese ("O OLHAR DO PACO" com seleção de cartões).
+ * A seleção é puramente pedagógica: não há resposta certa, não é persistida
+ * e não afeta o progresso do aluno.
+ */
+export interface HypothesisBlock {
+  title: string;
+  intro: string;
+  cards: HypothesisCard[];
+  question: string;
+  paco: string;
+  reveal: string;
+}
+
+/** Bloco visual de conexão simples: uma sequência de etapas + destaque. */
+export interface ConnectionBlock {
+  title: string;
+  flow: string[];
+  highlight: string;
+  text: string;
+}
+
+/** Item de accordion do bloco de aplicação (ex.: LOCAL / REGIONAL / GLOBAL). */
+export interface ApplicationAccordionItem {
+  id: string;
+  title: string;
+  content: string;
+}
+
+/** Bloco de aplicação de conceitos a um caso concreto. */
+export interface ApplicationBlock {
+  title: string;
+  /** Frase curta que nomeia o exemplo concreto usado (opcional). */
+  context?: string;
+  flow: string[];
+  question: string;
+  accordions: ApplicationAccordionItem[];
+}
+
+/** Item de aprofundamento (accordion com título, conteúdo e destaque). */
+export interface DeepDiveItem {
+  id: string;
+  title: string;
+  content: string;
+  /** Frase de destaque (opcional — nem todo item precisa de uma). */
+  highlight?: string;
+  /** Fluxo visual opcional dentro do item (ex.: MINERAL → CHIP → ...). */
+  flow?: string[];
+}
+
+/** Bloco de aprofundamento em accordions temáticos. */
+export interface DeepDiveBlock {
+  title: string;
+  items: DeepDiveItem[];
+  closing?: string;
+}
+
+/** Uma dimensão conectada ao Brasil (ex.: ALIMENTOS, ENERGIA...). */
+export interface ConnectionDimension {
+  id: string;
+  label: string;
+  description: string;
+}
+
+/** Bloco "E O BRASIL?" — o país no centro de uma rede de conexões. */
+export interface BrazilConnectionsBlock {
+  title: string;
+  question: string;
+  center: string;
+  items: ConnectionDimension[];
+  study: string;
+  highlight: string;
+}
+
+/** Bloco "Como isso aparece na prova?" — o que a questão entrega vs. cobra. */
+export interface ExamFormatBlock {
+  title: string;
+  deliversTitle: string;
+  delivers: string[];
+  demandsTitle: string;
+  demands: string[];
+  highlight: string;
+  guidingIntro: string;
+  guidingQuestions: string[];
+}
+
 /** Alternativa de uma questão de vestibular. */
 export interface QuestionOption {
   id: string; // "A" | "B" | ...
@@ -118,8 +210,16 @@ export interface VestibularQuestionData {
 export interface LessonContent {
   /** 🎯 SUA MISSÃO */
   mission: string;
+  /** Título da caixa de missão. Mantém "Sua missão" se omitido. */
+  missionTitle?: string;
   /** O OLHAR DO PACO */
   observation?: PacoObservationBlock;
+  /**
+   * O OLHAR DO PACO — variante com provocação/hipótese (seleção de
+   * cartões). Opcional e independente de `observation`: uma aula usa um
+   * ou outro, conforme a dinâmica pedagógica.
+   */
+  hypothesis?: HypothesisBlock;
   /** DÊ NOME AO QUE VOCÊ VIU — as cinco lentes */
   lenses?: {
     title: string;
@@ -135,6 +235,8 @@ export interface LessonContent {
     items: LookAgainItem[];
     closingQuote: string;
   };
+  /** Bloco visual de conexão simples (ex.: "E se fossem a mesma história?"). */
+  connection?: ConnectionBlock;
   /** 🎥 AGORA, VAMOS CONSTRUIR O CONCEITO */
   video?: {
     title: string;
@@ -145,10 +247,23 @@ export interface LessonContent {
     title: string;
     items: ConceptDetail[];
   };
+  /** Bloco de aplicação a um caso concreto (ex.: "AGORA CONECTE"). */
+  application?: ApplicationBlock;
+  /** Bloco de aprofundamento em accordions temáticos. */
+  deepDive?: DeepDiveBlock;
+  /** Bloco "E O BRASIL?" */
+  brazilConnections?: BrazilConnectionsBlock;
+  /** Bloco "Como isso aparece na prova?" */
+  examFormat?: ExamFormatBlock;
   /** PROVE QUE SEU OLHAR MUDOU */
   question?: VestibularQuestionData;
   /** 🎯 MISSÃO CUMPRIDA? */
   missionCheck: string;
+  /**
+   * Mensagem da celebração ao concluir a aula (opcional). Quando ausente,
+   * `LessonCompletion` usa o texto padrão já validado na Aula 01.
+   */
+  completionMessage?: string;
 }
 
 /* ------------------------------------------------------------------ */

@@ -7,6 +7,7 @@ import type {
   Week,
 } from "@/lib/types";
 import { aula01Content } from "@/data/lessons/semana-01-aula-01";
+import { aula02Content } from "@/data/lessons/semana-01-aula-02";
 
 /**
  * ===================================================================
@@ -165,7 +166,19 @@ const semana01: Week = makeWeek({
       status: "publicada",
       content: aula01Content,
     }),
-    makeLesson({ weekNumber: 1, number: 2, pillar: "geopolitica" }),
+    makeLesson({
+      weekNumber: 1,
+      number: 2,
+      pillar: "geopolitica",
+      title: "O MUNDO EM 2026",
+      subtitle: "Um mundo conectado, disputado e em transformação.",
+      description:
+        "Antes de tentar entender cada notícia, aprenda a enxergar as conexões entre elas.",
+      // Cole aqui a URL do YouTube quando o vídeo estiver pronto.
+      videoUrl: null,
+      status: "publicada",
+      content: aula02Content,
+    }),
     makeLesson({ weekNumber: 1, number: 3, pillar: "politica" }),
   ],
   checkpoint: makeCheckpoint(1),

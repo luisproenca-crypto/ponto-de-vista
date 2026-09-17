@@ -1,7 +1,14 @@
 import { Target } from "lucide-react";
 
 /** 🎯 SUA MISSÃO — objetivo de aprendizagem da aula. */
-export function MissionBlock({ text }: { text: string }) {
+export function MissionBlock({
+  text,
+  title = "Sua missão",
+}: {
+  text: string;
+  /** Título da caixa. Mantém o texto padrão se omitido. */
+  title?: string;
+}) {
   return (
     <section
       aria-labelledby="sua-missao"
@@ -12,7 +19,7 @@ export function MissionBlock({ text }: { text: string }) {
         className="pdv-eyebrow flex items-center gap-2 text-laranja-escuro"
       >
         <Target className="h-4 w-4" aria-hidden="true" />
-        Sua missão
+        {title}
       </h2>
       <p className="mt-4 max-w-leitura font-display text-lg leading-snug text-grafite sm:text-xl">
         {text}

@@ -14,10 +14,16 @@ import { ActionLink } from "@/components/ui/ActionLink";
 import { LessonHeader } from "@/components/aula/LessonHeader";
 import { MissionBlock } from "@/components/aula/MissionBlock";
 import { PacoInsight } from "@/components/aula/PacoInsight";
+import { HypothesisCards } from "@/components/aula/HypothesisCards";
 import { ConceptLens } from "@/components/aula/ConceptLens";
 import { LookAgain } from "@/components/aula/LookAgain";
+import { ConnectionInsight } from "@/components/aula/ConnectionInsight";
 import { VideoLesson } from "@/components/aula/VideoLesson";
 import { ConceptAccordion } from "@/components/aula/ConceptAccordion";
+import { ApplicationCase } from "@/components/aula/ApplicationCase";
+import { DeepDiveAccordion } from "@/components/aula/DeepDiveAccordion";
+import { BrazilConnections } from "@/components/aula/BrazilConnections";
+import { ExamFormat } from "@/components/aula/ExamFormat";
 import { VestibularQuestion } from "@/components/aula/VestibularQuestion";
 import { LessonCompletion } from "@/components/aula/LessonCompletion";
 import { PreviousNextLesson } from "@/components/aula/PreviousNextLesson";
@@ -89,11 +95,21 @@ export default async function AulaPage({ params }: { params: Params }) {
 
       <Container width="normal" className="space-y-16 py-14 sm:space-y-20 sm:py-16">
         {/* 🎯 Sua missão */}
-        <MissionBlock text={conteudo.mission} />
+        <MissionBlock text={conteudo.mission} title={conteudo.missionTitle} />
 
         {/* O olhar do Paco */}
         {conteudo.observation ? (
           <PacoInsight block={conteudo.observation} imageId="imagem-observacao" />
+        ) : null}
+
+        {/* O olhar do Paco — variante de provocação/hipótese */}
+        {conteudo.hypothesis ? (
+          <HypothesisCards block={conteudo.hypothesis} />
+        ) : null}
+
+        {/* Bloco de conexão simples (ex.: "E se fossem a mesma história?") */}
+        {conteudo.connection ? (
+          <ConnectionInsight block={conteudo.connection} />
         ) : null}
 
         {/* Dê nome ao que você viu — as cinco lentes */}
@@ -116,6 +132,11 @@ export default async function AulaPage({ params }: { params: Params }) {
             closingQuote={conteudo.lookAgain.closingQuote}
             image={conteudo.observation?.image ?? null}
           />
+        ) : null}
+
+        {/* Aplicação a um caso concreto (ex.: "AGORA CONECTE") */}
+        {conteudo.application ? (
+          <ApplicationCase block={conteudo.application} />
         ) : null}
 
         {/* Videoaula */}
@@ -157,13 +178,28 @@ export default async function AulaPage({ params }: { params: Params }) {
           />
         ) : null}
 
+        {/* Aprofundamento em accordions temáticos */}
+        {conteudo.deepDive ? <DeepDiveAccordion block={conteudo.deepDive} /> : null}
+
+        {/* E o Brasil? */}
+        {conteudo.brazilConnections ? (
+          <BrazilConnections block={conteudo.brazilConnections} />
+        ) : null}
+
+        {/* Como isso aparece na prova? */}
+        {conteudo.examFormat ? <ExamFormat block={conteudo.examFormat} /> : null}
+
         {/* Questão de aplicação */}
         {conteudo.question ? (
           <VestibularQuestion question={conteudo.question} />
         ) : null}
 
         {/* Missão cumprida? */}
-        <LessonCompletion lessonId={lesson.id} question={conteudo.missionCheck} />
+        <LessonCompletion
+          lessonId={lesson.id}
+          question={conteudo.missionCheck}
+          celebrationMessage={conteudo.completionMessage}
+        />
 
         {/* Navegação entre aulas */}
         <PreviousNextLesson previous={previous} next={next} />

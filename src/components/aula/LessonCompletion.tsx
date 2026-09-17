@@ -18,9 +18,12 @@ import { ProgressBar } from "@/components/ui/ProgressBar";
 export function LessonCompletion({
   lessonId,
   question,
+  celebrationMessage = "Mais um trecho da trilha percorrido.",
 }: {
   lessonId: string;
   question: string;
+  /** Texto da celebração ao concluir. Mantém o texto padrão se omitido. */
+  celebrationMessage?: string;
 }) {
   const { progress, hydrated, completeLesson, registerVisit } = useProgress();
   const concluida = hydrated && isLessonCompleted(progress, lessonId);
@@ -112,7 +115,7 @@ export function LessonCompletion({
             </div>
             <div>
               <p className="font-display text-lg leading-snug text-grafite">
-                Mais um trecho da trilha percorrido.
+                {celebrationMessage}
               </p>
               <p className="mt-1 text-sm text-cinza-texto">
                 Seu progresso foi salvo neste dispositivo.
