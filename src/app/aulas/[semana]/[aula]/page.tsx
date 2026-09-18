@@ -15,6 +15,7 @@ import { LessonHeader } from "@/components/aula/LessonHeader";
 import { MissionBlock } from "@/components/aula/MissionBlock";
 import { PacoInsight } from "@/components/aula/PacoInsight";
 import { HypothesisCards } from "@/components/aula/HypothesisCards";
+import { DecisionInsight } from "@/components/aula/DecisionInsight";
 import { ConceptLens } from "@/components/aula/ConceptLens";
 import { LookAgain } from "@/components/aula/LookAgain";
 import { ConnectionInsight } from "@/components/aula/ConnectionInsight";
@@ -107,6 +108,11 @@ export default async function AulaPage({ params }: { params: Params }) {
           <HypothesisCards block={conteudo.hypothesis} />
         ) : null}
 
+        {/* O olhar do Paco — variante de decisão em rounds */}
+        {conteudo.decisionInsight ? (
+          <DecisionInsight block={conteudo.decisionInsight} />
+        ) : null}
+
         {/* Bloco de conexão simples (ex.: "E se fossem a mesma história?") */}
         {conteudo.connection ? (
           <ConnectionInsight block={conteudo.connection} />
@@ -115,11 +121,13 @@ export default async function AulaPage({ params }: { params: Params }) {
         {/* Dê nome ao que você viu — as cinco lentes */}
         {conteudo.lenses ? (
           <ConceptLens
+            eyebrow={conteudo.lenses.eyebrow}
             title={conteudo.lenses.title}
             subtitle={conteudo.lenses.subtitle}
             items={conteudo.lenses.items}
             highlight={conteudo.lenses.highlight}
             image={conteudo.lenses.image}
+            hideImage={conteudo.lenses.hideImage}
           />
         ) : null}
 

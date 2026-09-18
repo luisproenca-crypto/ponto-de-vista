@@ -1,5 +1,6 @@
 import { ClipboardList } from "lucide-react";
 import type { ExamFormatBlock } from "@/lib/types";
+import { AssetImage } from "@/components/ui/AssetImage";
 import { QuoteBlock } from "@/components/ui/QuoteBlock";
 
 /** Como isso aparece na prova? — o que a questão entrega vs. o que cobra. */
@@ -49,6 +50,22 @@ export function ExamFormat({ block }: { block: ExamFormatBlock }) {
       <div className="mt-8">
         <QuoteBlock>{block.highlight}</QuoteBlock>
       </div>
+
+      {block.image ? (
+        <figure className="mt-8">
+          <AssetImage
+            src={block.image.src}
+            alt={block.image.alt}
+            ratio="16 / 9"
+            placeholderLabel="Imagem de apoio para a prova"
+          />
+          {block.image.caption ? (
+            <figcaption className="mt-3 font-mono text-[11px] uppercase tracking-[0.12em] text-cinza-medio">
+              {block.image.caption}
+            </figcaption>
+          ) : null}
+        </figure>
+      ) : null}
 
       <div className="mt-8 rounded-card border border-dashed border-roxo/30 bg-creme px-5 py-5 sm:px-6">
         <p className="font-display text-base leading-snug text-grafite sm:text-lg">

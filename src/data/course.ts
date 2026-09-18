@@ -8,6 +8,7 @@ import type {
 } from "@/lib/types";
 import { aula01Content } from "@/data/lessons/semana-01-aula-01";
 import { aula02Content } from "@/data/lessons/semana-01-aula-02";
+import { aula03Content } from "@/data/lessons/semana-01-aula-03";
 
 /**
  * ===================================================================
@@ -179,7 +180,19 @@ const semana01: Week = makeWeek({
       status: "publicada",
       content: aula02Content,
     }),
-    makeLesson({ weekNumber: 1, number: 3, pillar: "politica" }),
+    makeLesson({
+      weekNumber: 1,
+      number: 3,
+      pillar: "politica",
+      title: "ESTADO, PAÍS, NAÇÃO E GOVERNO",
+      subtitle: "Quatro palavras que parecem sinônimos, mas não são.",
+      description:
+        "Uma decisão sobre uma praça pode ensinar mais sobre política do que parece.",
+      // Cole aqui a URL do YouTube quando o vídeo estiver pronto.
+      videoUrl: null,
+      status: "publicada",
+      content: aula03Content,
+    }),
   ],
   checkpoint: makeCheckpoint(1),
 });

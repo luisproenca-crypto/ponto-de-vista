@@ -109,6 +109,36 @@ export interface HypothesisBlock {
   reveal: string;
 }
 
+/** Opção selecionável de um round do bloco de decisão. */
+export interface DecisionOption {
+  id: string;
+  label: string;
+}
+
+/**
+ * Um round de escolha única dentro do bloco de decisão: uma pergunta,
+ * as opções e o texto mostrado depois que o aluno escolhe uma delas.
+ */
+export interface DecisionRound {
+  id: string;
+  question: string;
+  options: DecisionOption[];
+  /** Texto mostrado após a escolha neste round (nunca certo/errado). */
+  reveal: string;
+}
+
+/**
+ * Bloco "O OLHAR DO PACO" — variante de decisão em rounds sucessivos de
+ * escolha única (ex.: "o que priorizar?" → "quem deveria decidir?").
+ * Nenhuma opção é certa ou errada; a seleção não afeta o progresso e não
+ * é persistida.
+ */
+export interface DecisionInsightBlock {
+  title: string;
+  image: CourseImage | null;
+  rounds: DecisionRound[];
+}
+
 /** Bloco visual de conexão simples: uma sequência de etapas + destaque. */
 export interface ConnectionBlock {
   title: string;
@@ -179,6 +209,8 @@ export interface ExamFormatBlock {
   highlight: string;
   guidingIntro: string;
   guidingQuestions: string[];
+  /** Arte de apoio opcional (ex.: pôster de revisão com as perguntas-guia). */
+  image?: CourseImage | null;
 }
 
 /** Alternativa de uma questão de vestibular. */
@@ -220,13 +252,26 @@ export interface LessonContent {
    * ou outro, conforme a dinâmica pedagógica.
    */
   hypothesis?: HypothesisBlock;
+  /**
+   * O OLHAR DO PACO — variante de decisão em rounds sucessivos de escolha
+   * única (ex.: "o que priorizar?" → "quem deveria decidir?"). Opcional e
+   * independente de `observation`/`hypothesis`.
+   */
+  decisionInsight?: DecisionInsightBlock;
   /** DÊ NOME AO QUE VOCÊ VIU — as cinco lentes */
   lenses?: {
+    /** Etiqueta acima do título. Mantém "As cinco lentes" se omitida. */
+    eyebrow?: string;
     title: string;
     subtitle: string;
     items: ConceptLensItem[];
     highlight: string;
     image: CourseImage | null;
+    /**
+     * `true` omite completamente a área de imagem (nem imagem, nem
+     * placeholder) — use quando a ausência de imagem for deliberada.
+     */
+    hideImage?: boolean;
   };
   /** 🔎 AGORA OLHE DE NOVO */
   lookAgain?: {

@@ -8,22 +8,32 @@ import { QuoteBlock } from "@/components/ui/QuoteBlock";
  * Cada lente é um cartão com o conceito e a sua pergunta-guia.
  */
 export function ConceptLens({
+  eyebrow = "As cinco lentes",
   title,
   subtitle,
   items,
   highlight,
   image,
+  hideImage = false,
 }: {
+  /** Etiqueta acima do título. Mantém "As cinco lentes" se omitida. */
+  eyebrow?: string;
   title: string;
   subtitle: string;
   items: ConceptLensItem[];
   highlight: string;
   image: CourseImage | null;
+  /**
+   * `true` omite completamente a área de imagem (nem imagem, nem
+   * placeholder) — para quando a ausência de imagem é deliberada, não
+   * "ainda não enviada". Padrão `false` preserva o comportamento atual.
+   */
+  hideImage?: boolean;
 }) {
   return (
     <section aria-labelledby="cinco-lentes">
       <SectionHeading
-        eyebrow="As cinco lentes"
+        eyebrow={eyebrow}
         title={title}
         subtitle={subtitle}
       />
@@ -55,14 +65,16 @@ export function ConceptLens({
         <QuoteBlock>{highlight}</QuoteBlock>
       </div>
 
-      <figure className="mt-8">
-        <AssetImage
-          src={image?.src ?? null}
-          alt={image?.alt ?? "Representação das cinco lentes conceituais"}
-          ratio="16 / 9"
-          placeholderLabel="Imagem das cinco lentes"
-        />
-      </figure>
+      {!hideImage ? (
+        <figure className="mt-8">
+          <AssetImage
+            src={image?.src ?? null}
+            alt={image?.alt ?? "Representação das cinco lentes conceituais"}
+            ratio="16 / 9"
+            placeholderLabel="Imagem das cinco lentes"
+          />
+        </figure>
+      ) : null}
     </section>
   );
 }
