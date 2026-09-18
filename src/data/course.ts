@@ -9,6 +9,7 @@ import type {
 import { aula01Content } from "@/data/lessons/semana-01-aula-01";
 import { aula02Content } from "@/data/lessons/semana-01-aula-02";
 import { aula03Content } from "@/data/lessons/semana-01-aula-03";
+import { checkpoint01Content } from "@/data/checkpoints/semana-01-checkpoint";
 
 /**
  * ===================================================================
@@ -194,7 +195,12 @@ const semana01: Week = makeWeek({
       content: aula03Content,
     }),
   ],
-  checkpoint: makeCheckpoint(1),
+  checkpoint: {
+    ...makeCheckpoint(1),
+    status: "publicada",
+    href: checkpointHref(makeCheckpoint(1)),
+    content: checkpoint01Content,
+  },
 });
 
 /* ------------------------------------------------------------------ */
@@ -301,6 +307,15 @@ export function getLessonById(id: string): Lesson | undefined {
 
 export function lessonHref(lesson: Lesson): string {
   return `/aulas/${lesson.weekSlug}/${lesson.slug}`;
+}
+
+/** Checkpoint de uma semana (há no máximo um por semana). */
+export function getCheckpoint(weekSlug: string): Checkpoint | undefined {
+  return getWeek(weekSlug)?.checkpoint ?? undefined;
+}
+
+export function checkpointHref(checkpoint: Checkpoint): string {
+  return `/checkpoints/${checkpoint.weekSlug}`;
 }
 
 /** Aula anterior e próxima considerando a trilha inteira. */

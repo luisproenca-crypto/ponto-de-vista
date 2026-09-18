@@ -339,6 +339,92 @@ export interface Lesson {
   content: LessonContent | null;
 }
 
+/**
+ * Situação-problema que permanece ao longo de toda a experiência do
+ * checkpoint — apresentada uma vez, referenciada pelas etapas seguintes.
+ */
+export interface CheckpointScenario {
+  title: string;
+  description: string;
+  image: CourseImage | null;
+}
+
+/** Item "antes/depois" do bloco de reflexão final (MUDE O OLHAR). */
+export interface CheckpointBeforeAfterItem {
+  id: string;
+  before: string;
+  after: string;
+}
+
+/**
+ * Uma etapa/bloco do checkpoint (ex.: OBSERVE, NOMEIE, CONECTE...).
+ *
+ * Não existe uma sequência fixa de etapas entre Checkpoints 01–10: cada
+ * checkpoint define suas próprias etapas, em qualquer ordem, escolhendo
+ * livremente entre estes formatos de interação (`kind`). Os nomes
+ * pedagógicos (OBSERVE, NOMEIE...) são só o valor de `title` — nunca um
+ * tipo — então checkpoints futuros podem nomear e ordenar suas etapas
+ * como fizer sentido, usando os mesmos formatos ou, quando necessário,
+ * um novo `kind`.
+ */
+export type CheckpointStep =
+  | {
+      id: string;
+      title: string;
+      kind: "observation";
+      /** Perguntas de observação sobre a situação-problema (sem certo/errado). */
+      questions: string[];
+    }
+  | {
+      id: string;
+      title: string;
+      kind: "cards";
+      /** Etiqueta acima do título. Mantém o padrão de `ConceptLens` se omitida. */
+      eyebrow?: string;
+      subtitle: string;
+      items: ConceptLensItem[];
+      highlight: string;
+    }
+  | {
+      id: string;
+      title: string;
+      kind: "flow";
+      flow: string[];
+      highlight: string;
+      text: string;
+    }
+  | {
+      id: string;
+      title: string;
+      kind: "questions";
+      questions: VestibularQuestionData[];
+    }
+  | {
+      id: string;
+      title: string;
+      kind: "reflection";
+      cards: CheckpointBeforeAfterItem[];
+      closing?: string;
+    };
+
+/**
+ * Conteúdo completo de um checkpoint publicado: introdução, a
+ * situação-problema persistente, a sequência ordenada de etapas e a
+ * conclusão. Estrutura simples e extensível — cada checkpoint decide
+ * quantas etapas tem e o que cada uma contém.
+ */
+export interface CheckpointContent {
+  intro: string;
+  scenario: CheckpointScenario;
+  steps: CheckpointStep[];
+  conclusion: string;
+  /**
+   * Mensagem da celebração ao concluir o checkpoint (opcional). Quando
+   * ausente, `CheckpointCompletion` usa o texto padrão.
+   */
+  celebrationMessage?: string;
+}
+
 export interface Checkpoint {
   id: string;
   number: number;
@@ -349,6 +435,7 @@ export interface Checkpoint {
   status: ContentStatus;
   /** Rota do questionário quando existir. */
   href: string | null;
+  content?: CheckpointContent | null;
 }
 
 export interface WeekMap {
