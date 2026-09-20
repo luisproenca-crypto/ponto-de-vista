@@ -24,7 +24,14 @@ export function LoginForm() {
     setEnviando(true);
 
     try {
-      const supabase = createClient();
+      let supabase;
+      try {
+        supabase = createClient();
+      } catch (e) {
+        console.error("[login] falha ao criar client", (e as Error)?.message);
+        throw e;
+      }
+
       const { error } = await supabase.auth.signInWithOtp({
         email: email.trim(),
         options: {
@@ -38,13 +45,18 @@ export function LoginForm() {
       });
 
       if (error) {
+        console.error("[login] erro retornado pelo Supabase", error.message);
         setErro("Não foi possível enviar o link agora. Tente novamente em instantes.");
         setEnviando(false);
         return;
       }
 
       setEnviado(true);
-    } catch {
+    } catch (e) {
+      console.error(
+        "[login] falha inesperada",
+        e instanceof Error ? e.message : String(e),
+      );
       setErro("Não foi possível enviar o link agora. Tente novamente em instantes.");
     } finally {
       setEnviando(false);
