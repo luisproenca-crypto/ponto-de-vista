@@ -29,9 +29,12 @@ export const config = {
     /*
      * Tudo, exceto:
      *   - a própria página /acesso e sua API
+     *   - /login e /auth/* (infraestrutura Supabase em construção —
+     *     precisam ficar fora da barreira de turma para não entrar em
+     *     loop de redirecionamento; ainda NÃO são a autorização do site)
      *   - arquivos internos do Next.js
      *   - ícones e a pasta /assets em /public
      */
-    "/((?!acesso|api/acesso|_next/static|_next/image|assets|favicon.ico|icon.svg|robots.txt|sitemap.xml).*)",
+    "/((?!acesso|api/acesso|login|auth|_next/static|_next/image|assets|favicon.ico|icon.svg|robots.txt|sitemap.xml).*)",
   ],
 };
