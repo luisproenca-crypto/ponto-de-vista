@@ -1,40 +1,67 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { ACCESS_COOKIE, buildAccessToken, getAccessCode, safeEqual } from "@/lib/acesso";
+import { updateSession } from "@/lib/supabase/middleware";
 
 /**
- * Middleware da barreira de acesso.
- * Se COURSE_ACCESS_CODE não estiver definida, não faz absolutamente nada.
+ * Barreira de acesso às rotas exclusivas do curso.
+ *
+ * Autorização por sessão individual do Supabase (Magic Link). O antigo
+ * cookie compartilhado de turma (`pdv_acesso` / `COURSE_ACCESS_CODE`,
+ * ver `src/lib/acesso.ts`) não participa mais desta decisão — os
+ * arquivos daquele sistema continuam no repositório temporariamente,
+ * mas ficaram órfãos, aguardando limpeza em etapa futura.
  */
+const PROTECTED_PREFIXES = [
+  "/comece-aqui",
+  "/trilha",
+  "/central",
+  "/aulas",
+  "/checkpoints",
+  "/comunidade",
+];
+
+function isProtectedPath(pathname: string): boolean {
+  return PROTECTED_PREFIXES.some(
+    (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`),
+  );
+}
+
+/** Só aceitamos redirecionar de volta para um caminho interno da aplicação. */
+function sanitizeNext(next: string): string {
+  if (!next.startsWith("/") || next.startsWith("//")) return "/";
+  return next;
+}
+
 export async function middleware(request: NextRequest) {
-  const code = getAccessCode();
-  if (!code) return NextResponse.next();
+  const { response, authenticated } = await updateSession(request);
 
-  const cookie = request.cookies.get(ACCESS_COOKIE)?.value;
-  const esperado = await buildAccessToken(code);
+  if (isProtectedPath(request.nextUrl.pathname) && !authenticated) {
+    const next = sanitizeNext(
+      request.nextUrl.pathname + request.nextUrl.search,
+    );
+    const loginUrl = request.nextUrl.clone();
+    loginUrl.pathname = "/login";
+    loginUrl.search = `?next=${encodeURIComponent(next)}`;
 
-  if (cookie && safeEqual(cookie, esperado)) {
-    return NextResponse.next();
+    // Preserva os cookies (possivelmente renovados por updateSession)
+    // mesmo numa resposta de redirect diferente da resposta original.
+    const redirectResponse = NextResponse.redirect(loginUrl);
+    response.cookies.getAll().forEach((cookie) => {
+      redirectResponse.cookies.set(cookie);
+    });
+    return redirectResponse;
   }
 
-  const url = request.nextUrl.clone();
-  url.pathname = "/acesso";
-  url.search = `?next=${encodeURIComponent(
-    request.nextUrl.pathname + request.nextUrl.search,
-  )}`;
-  return NextResponse.redirect(url);
+  return response;
 }
 
 export const config = {
   matcher: [
     /*
-     * Tudo, exceto:
-     *   - a própria página /acesso e sua API
-     *   - /login e /auth/* (infraestrutura Supabase em construção —
-     *     precisam ficar fora da barreira de turma para não entrar em
-     *     loop de redirecionamento; ainda NÃO são a autorização do site)
-     *   - arquivos internos do Next.js
-     *   - ícones e a pasta /assets em /public
+     * Tudo, exceto arquivos internos do Next.js, ícones e a pasta
+     * /assets em /public. Rodar em quase todas as rotas (inclusive as
+     * públicas) permite renovar a sessão Supabase a cada requisição; a
+     * decisão de bloquear só se aplica às rotas protegidas acima.
      */
-    "/((?!acesso|api/acesso|login|auth|_next/static|_next/image|assets|favicon.ico|icon.svg|robots.txt|sitemap.xml).*)",
+    "/((?!_next/static|_next/image|assets|favicon.ico|icon.svg|robots.txt|sitemap.xml).*)",
   ],
 };
