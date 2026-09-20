@@ -11,9 +11,8 @@ export const metadata: Metadata = {
 };
 
 /**
- * Login individual por Magic Link (Supabase Auth) — infraestrutura em
- * construção, ainda não é a barreira de acesso do portal (que continua
- * sendo `COURSE_ACCESS_CODE`, ver `src/middleware.ts`).
+ * Login individual por Magic Link (Supabase Auth) — barreira de acesso
+ * do portal (ver `src/middleware.ts`).
  */
 export default async function LoginPage({
   searchParams,

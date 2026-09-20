@@ -4,11 +4,7 @@ import { updateSession } from "@/lib/supabase/middleware";
 /**
  * Barreira de acesso às rotas exclusivas do curso.
  *
- * Autorização por sessão individual do Supabase (Magic Link). O antigo
- * cookie compartilhado de turma (`pdv_acesso` / `COURSE_ACCESS_CODE`,
- * ver `src/lib/acesso.ts`) não participa mais desta decisão — os
- * arquivos daquele sistema continuam no repositório temporariamente,
- * mas ficaram órfãos, aguardando limpeza em etapa futura.
+ * Autorização por sessão individual do Supabase (Magic Link).
  */
 const PROTECTED_PREFIXES = [
   "/comece-aqui",
