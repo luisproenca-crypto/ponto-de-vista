@@ -172,7 +172,9 @@ export default async function AulaPage({ params }: { params: Params }) {
             <div className="mt-8">
               <VideoLesson
                 url={lesson.videoUrl}
-                title={`Videoaula — ${lesson.title ?? "Ponto de Vista"}`}
+                title={
+                  lesson.videoTitle ?? `Videoaula — ${lesson.title ?? "Ponto de Vista"}`
+                }
               />
             </div>
           </section>

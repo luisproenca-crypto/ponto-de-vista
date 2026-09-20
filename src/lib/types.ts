@@ -334,6 +334,11 @@ export interface Lesson {
   description: string | null;
   /** URL do YouTube (watch, youtu.be ou embed). `null` = player em placeholder. */
   videoUrl: string | null;
+  /**
+   * Title acessível do player, específico da aula (opcional). Quando
+   * ausente, o template usa um title padrão derivado de `title`.
+   */
+  videoTitle?: string | null;
   resources: LessonResource[];
   status: ContentStatus;
   content: LessonContent | null;

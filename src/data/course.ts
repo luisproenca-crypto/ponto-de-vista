@@ -59,6 +59,7 @@ interface LessonInput {
   subtitle?: string | null;
   description?: string | null;
   videoUrl?: string | null;
+  videoTitle?: string | null;
   resources?: LessonResource[];
   status?: Lesson["status"];
   content?: Lesson["content"];
@@ -78,6 +79,7 @@ function makeLesson(input: LessonInput): Lesson {
     subtitle: input.subtitle ?? null,
     description: input.description ?? null,
     videoUrl: input.videoUrl ?? null,
+    videoTitle: input.videoTitle ?? null,
     resources: input.resources ?? [],
     status: input.status ?? "em-preparacao",
     content: input.content ?? null,
@@ -153,9 +155,9 @@ const semana01: Week = makeWeek({
       subtitle: "Os conceitos que nos ajudam a compreender o espaço.",
       description:
         "Antes de interpretar o mundo, precisamos aprender a observá-lo.",
-      // Cole aqui a URL do YouTube quando o vídeo estiver pronto.
-      // Ex.: "https://www.youtube.com/watch?v=XXXXXXXXXXX"
-      videoUrl: null,
+      // Vídeo oficial (YouTube, não listado).
+      videoUrl: "https://youtu.be/_dZDgW20HD8",
+      videoTitle: "Vídeo — Aula 01: Aprender a Olhar",
       resources: [
         {
           id: "s01-a01-mapa",
@@ -176,8 +178,9 @@ const semana01: Week = makeWeek({
       subtitle: "Um mundo conectado, disputado e em transformação.",
       description:
         "Antes de tentar entender cada notícia, aprenda a enxergar as conexões entre elas.",
-      // Cole aqui a URL do YouTube quando o vídeo estiver pronto.
-      videoUrl: null,
+      // Vídeo oficial (YouTube, não listado).
+      videoUrl: "https://youtu.be/o7j_Oo7kBAg",
+      videoTitle: "Vídeo — Aula 02: O Mundo em 2026",
       status: "publicada",
       content: aula02Content,
     }),
@@ -189,8 +192,9 @@ const semana01: Week = makeWeek({
       subtitle: "Quatro palavras que parecem sinônimos, mas não são.",
       description:
         "Uma decisão sobre uma praça pode ensinar mais sobre política do que parece.",
-      // Cole aqui a URL do YouTube quando o vídeo estiver pronto.
-      videoUrl: null,
+      // Vídeo oficial (YouTube, não listado).
+      videoUrl: "https://youtu.be/yONH0wB52Dk",
+      videoTitle: "Vídeo — Aula 03: Estado, País, Nação e Governo",
       status: "publicada",
       content: aula03Content,
     }),
