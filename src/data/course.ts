@@ -10,6 +10,10 @@ import { aula01Content } from "@/data/lessons/semana-01-aula-01";
 import { aula02Content } from "@/data/lessons/semana-01-aula-02";
 import { aula03Content } from "@/data/lessons/semana-01-aula-03";
 import { checkpoint01Content } from "@/data/checkpoints/semana-01-checkpoint";
+import { aula04Content } from "@/data/lessons/semana-02-aula-04";
+import { aula05Content } from "@/data/lessons/semana-02-aula-05";
+import { aula06Content } from "@/data/lessons/semana-02-aula-06";
+import { checkpoint02Content } from "@/data/checkpoints/semana-02-checkpoint";
 
 /**
  * ===================================================================
@@ -214,9 +218,46 @@ const semana01: Week = makeWeek({
 const semana02: Week = makeWeek({
   number: 2,
   title: "MAPAS, PODER E DEMOCRACIA",
-  description: null,
-  lessons: makeDefaultLessons(2),
-  checkpoint: makeCheckpoint(2),
+  description:
+    "Representar, disputar e participar: uma semana para compreender como mapas, relações internacionais e instituições ajudam a organizar nossa leitura do mundo.",
+  lessons: [
+    makeLesson({
+      weekNumber: 2,
+      number: 4,
+      pillar: "geografia",
+      title: "CARTOGRAFIA SEM TRAUMA",
+      subtitle: "Todo mapa é uma escolha.",
+      videoUrl: null,
+      status: "publicada",
+      content: aula04Content,
+    }),
+    makeLesson({
+      weekNumber: 2,
+      number: 5,
+      pillar: "geopolitica",
+      title: "EUA × CHINA",
+      subtitle: "A disputa pela organização do mundo",
+      videoUrl: null,
+      status: "publicada",
+      content: aula05Content,
+    }),
+    makeLesson({
+      weekNumber: 2,
+      number: 6,
+      pillar: "politica",
+      title: "DEMOCRACIA, REPÚBLICA E CIDADANIA",
+      subtitle: "O poder pertence a quem?",
+      videoUrl: null,
+      status: "publicada",
+      content: aula06Content,
+    }),
+  ],
+  checkpoint: {
+    ...makeCheckpoint(2),
+    status: "publicada",
+    href: checkpointHref(makeCheckpoint(2)),
+    content: checkpoint02Content,
+  },
 });
 
 /* ------------------------------------------------------------------ */
