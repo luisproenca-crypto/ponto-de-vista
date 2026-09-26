@@ -136,6 +136,11 @@ export interface DecisionRound {
 export interface DecisionInsightBlock {
   title: string;
   image: CourseImage | null;
+  /**
+   * `true` omite completamente a área de imagem (nem imagem, nem
+   * placeholder) — use quando a ausência de imagem for deliberada.
+   */
+  hideImage?: boolean;
   rounds: DecisionRound[];
 }
 

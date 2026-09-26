@@ -26,10 +26,9 @@ export const aula06Content: LessonContent = {
 
   decisionInsight: {
     title: "O OLHAR DO PACO",
-    // Imagem ainda não produzida. Quando existir, enviar o arquivo para
-    // /public/assets/aulas/aula06-olhar-paco.jpg e trocar `null` por
-    // { src, alt }.
+    // A atividade do grêmio é autossuficiente: sem imagem e sem placeholder.
     image: null,
+    hideImage: true,
     rounds: [
       {
         id: "como-decidir",

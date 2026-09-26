@@ -43,19 +43,21 @@ export function DecisionInsight({ block }: { block: DecisionInsightBlock }) {
         </div>
 
         {/* Imagem de observação */}
-        <figure className="mt-8">
-          <AssetImage
-            src={block.image?.src ?? null}
-            alt={block.image?.alt ?? "Imagem de observação da aula"}
-            ratio="16 / 9"
-            placeholderLabel="Imagem de observação da aula"
-          />
-          {block.image?.caption ? (
-            <figcaption className="mt-3 font-mono text-[11px] uppercase tracking-[0.12em] text-cinza-medio">
-              {block.image.caption}
-            </figcaption>
-          ) : null}
-        </figure>
+        {!block.hideImage ? (
+          <figure className="mt-8">
+            <AssetImage
+              src={block.image?.src ?? null}
+              alt={block.image?.alt ?? "Imagem de observação da aula"}
+              ratio="16 / 9"
+              placeholderLabel="Imagem de observação da aula"
+            />
+            {block.image?.caption ? (
+              <figcaption className="mt-3 font-mono text-[11px] uppercase tracking-[0.12em] text-cinza-medio">
+                {block.image.caption}
+              </figcaption>
+            ) : null}
+          </figure>
+        ) : null}
 
         {/* Round atual */}
         <fieldset className="mt-8">
