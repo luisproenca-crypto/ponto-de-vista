@@ -147,6 +147,9 @@ export function WeekCard({
                 checkpoint={week.checkpoint}
                 status={checkpointStatus}
                 compacto
+                rotuloConcluido={
+                  week.checkpoint.id === "s02-cp" ? "Revisar checkpoint" : undefined
+                }
               />
             ) : null}
           </div>

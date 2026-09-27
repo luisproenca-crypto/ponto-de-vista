@@ -26,11 +26,14 @@ export function CheckpointCard({
   status,
   weekTitle,
   compacto = false,
+  rotuloConcluido,
 }: {
   checkpoint: Checkpoint;
   status: CheckpointStatus;
   weekTitle?: string | null;
   compacto?: boolean;
+  /** Rótulo do link quando o checkpoint está concluído. Se omitido, mantém "Iniciar checkpoint". */
+  rotuloConcluido?: string;
 }) {
   const disponivel = checkpoint.status === "publicada" && checkpoint.href;
 
@@ -83,7 +86,9 @@ export function CheckpointCard({
               href={checkpoint.href as string}
               className="mt-4 inline-flex min-h-[44px] items-center justify-center rounded-full bg-roxo px-5 py-2.5 font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-roxo-escuro motion-reduce:transition-none"
             >
-              Iniciar checkpoint
+              {status === "concluido" && rotuloConcluido
+                ? rotuloConcluido
+                : "Iniciar checkpoint"}
             </Link>
           ) : (
             <p className="mt-4 inline-flex min-h-[44px] cursor-not-allowed items-center justify-center rounded-full border border-cinza px-5 py-2.5 font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-cinza-medio">
