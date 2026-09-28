@@ -17,6 +17,7 @@ import { checkpoint02Content } from "@/data/checkpoints/semana-02-checkpoint";
 import { aula07Content } from "@/data/lessons/semana-03-aula-07";
 import { aula08Content } from "@/data/lessons/semana-03-aula-08";
 import { aula09Content } from "@/data/lessons/semana-03-aula-09";
+import { checkpoint03Content } from "@/data/checkpoints/semana-03-checkpoint";
 
 /**
  * ===================================================================
@@ -310,7 +311,12 @@ const semana03: Week = makeWeek({
       content: aula09Content,
     }),
   ],
-  checkpoint: makeCheckpoint(3),
+  checkpoint: {
+    ...makeCheckpoint(3),
+    status: "publicada",
+    href: checkpointHref(makeCheckpoint(3)),
+    content: checkpoint03Content,
+  },
 });
 
 /* ------------------------------------------------------------------ */
