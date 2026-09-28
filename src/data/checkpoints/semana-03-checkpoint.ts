@@ -40,10 +40,10 @@ export const checkpoint03Content: CheckpointContent = {
     title: "SERRA CLARA",
     description:
       "Serra Clara é uma região fictícia brasileira formada por três localidades: Serra Clara, que concentra serviços, comércio e instituições regionais; Vale do Ipê, que passou por crescimento urbano recente e recebeu novos moradores; e Ribeira Nova, que perdeu parte de sua população jovem para centros maiores. Um novo corredor de transporte é proposto para conectar as três localidades. Durante o debate público sobre o corredor, diferentes informações começam a circular. Documento A — Dados demográficos: apresenta a distribuição populacional da região, o crescimento recente e os movimentos migratórios entre as três localidades. Documento B — Manchete: enfatiza que Vale do Ipê estaria passando por uma “explosão populacional”. Documento C — Série histórica: mostra que o crescimento recente de Vale do Ipê é relevante, mas parte de uma base populacional menor do que a das outras duas localidades. Documento D — Participação: moradores das três localidades reivindicam participação na decisão sobre o corredor de transporte. Nenhum desses documentos deve ser lido como “a verdade”: são evidências e perspectivas que precisam ser comparadas.",
-    // Imagem ainda não produzida nesta etapa. Quando existir, enviar o
-    // arquivo para /public/assets/checkpoints/semana-03-serra-clara.png
-    // (ou nome equivalente) e trocar `null` por { src, alt }.
-    image: null,
+    image: {
+      src: "/assets/checkpoints/semana-03-serra-clara.png",
+      alt: "Mapa esquemático da região fictícia de Serra Clara, com as localidades Serra Clara, Vale do Ipê e Ribeira Nova e o corredor de transporte proposto.",
+    },
   },
 
   steps: [
