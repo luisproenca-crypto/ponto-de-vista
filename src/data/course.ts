@@ -227,7 +227,9 @@ const semana02: Week = makeWeek({
       pillar: "geografia",
       title: "CARTOGRAFIA SEM TRAUMA",
       subtitle: "Todo mapa é uma escolha.",
-      videoUrl: null,
+      // Vídeo oficial (YouTube, não listado).
+      videoUrl: "https://youtu.be/6BDHTAJcjic",
+      videoTitle: "Vídeo — Aula 04: Cartografia sem Trauma",
       status: "publicada",
       content: aula04Content,
     }),
@@ -237,7 +239,9 @@ const semana02: Week = makeWeek({
       pillar: "geopolitica",
       title: "EUA × CHINA",
       subtitle: "A disputa pela organização do mundo",
-      videoUrl: null,
+      // Vídeo oficial (YouTube, não listado).
+      videoUrl: "https://youtu.be/ozyr9dM-KEc",
+      videoTitle: "Vídeo — Aula 05: EUA × China",
       status: "publicada",
       content: aula05Content,
     }),
@@ -247,7 +251,9 @@ const semana02: Week = makeWeek({
       pillar: "politica",
       title: "DEMOCRACIA, REPÚBLICA E CIDADANIA",
       subtitle: "O poder pertence a quem?",
-      videoUrl: null,
+      // Vídeo oficial (YouTube, não listado).
+      videoUrl: "https://youtu.be/ZcCn4b_3TmI",
+      videoTitle: "Vídeo — Aula 06: Democracia, República e Cidadania",
       status: "publicada",
       content: aula06Content,
     }),
