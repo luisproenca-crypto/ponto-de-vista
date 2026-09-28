@@ -14,6 +14,9 @@ import { aula04Content } from "@/data/lessons/semana-02-aula-04";
 import { aula05Content } from "@/data/lessons/semana-02-aula-05";
 import { aula06Content } from "@/data/lessons/semana-02-aula-06";
 import { checkpoint02Content } from "@/data/checkpoints/semana-02-checkpoint";
+import { aula07Content } from "@/data/lessons/semana-03-aula-07";
+import { aula08Content } from "@/data/lessons/semana-03-aula-08";
+import { aula09Content } from "@/data/lessons/semana-03-aula-09";
 
 /**
  * ===================================================================
@@ -267,14 +270,46 @@ const semana02: Week = makeWeek({
 });
 
 /* ------------------------------------------------------------------ */
-/* SEMANA 03 — BRASIL, INFORMAÇÃO E ELEIÇÕES                           */
+/* SEMANA 03 — POPULAÇÃO, INFORMAÇÃO E ESCOLHAS                        */
 /* ------------------------------------------------------------------ */
 
 const semana03: Week = makeWeek({
   number: 3,
-  title: "BRASIL, INFORMAÇÃO E ELEIÇÕES",
-  description: null,
-  lessons: makeDefaultLessons(3),
+  title: "POPULAÇÃO, INFORMAÇÃO E ESCOLHAS",
+  description:
+    "Uma semana para compreender como a população se distribui, como as informações sobre a realidade são interpretadas e disputadas, e como escolhas coletivas se transformam em representação e participação.",
+  lessons: [
+    makeLesson({
+      weekNumber: 3,
+      number: 7,
+      pillar: "geografia",
+      title: "BRASIL EM MOVIMENTO",
+      subtitle: "Quem vive onde — e por quê?",
+      videoUrl: null,
+      status: "publicada",
+      content: aula07Content,
+    }),
+    makeLesson({
+      weekNumber: 3,
+      number: 8,
+      pillar: "geopolitica",
+      title: "INFORMAÇÃO EM DISPUTA",
+      subtitle: "Ver uma informação não é o mesmo que compreendê-la.",
+      videoUrl: null,
+      status: "publicada",
+      content: aula08Content,
+    }),
+    makeLesson({
+      weekNumber: 3,
+      number: 9,
+      pillar: "politica",
+      title: "ELEIÇÕES, REPRESENTAÇÃO E PARTICIPAÇÃO",
+      subtitle: "Escolher representantes é a única forma de participar?",
+      videoUrl: null,
+      status: "publicada",
+      content: aula09Content,
+    }),
+  ],
   checkpoint: makeCheckpoint(3),
 });
 
