@@ -102,7 +102,7 @@ export const checkpoint03Content: CheckpointContent = {
           id: "evidencia",
           emoji: "🔍",
           name: "EVIDÊNCIA",
-          question: "Que dados sustentam a ideia de “explosão populacional”?",
+          question: "Que dados apoiariam — ou não — a ideia de “explosão populacional”?",
         },
         {
           id: "contexto",
