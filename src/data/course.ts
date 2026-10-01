@@ -18,6 +18,9 @@ import { aula07Content } from "@/data/lessons/semana-03-aula-07";
 import { aula08Content } from "@/data/lessons/semana-03-aula-08";
 import { aula09Content } from "@/data/lessons/semana-03-aula-09";
 import { checkpoint03Content } from "@/data/checkpoints/semana-03-checkpoint";
+import { aula10Content } from "@/data/lessons/semana-04-aula-10";
+import { aula11Content } from "@/data/lessons/semana-04-aula-11";
+import { aula12Content } from "@/data/lessons/semana-04-aula-12";
 
 /**
  * ===================================================================
@@ -320,14 +323,64 @@ const semana03: Week = makeWeek({
 });
 
 /* ------------------------------------------------------------------ */
-/* SEMANAS 04 a 10 — estrutura editável                                */
+/* SEMANA 04 — URBANIZAÇÃO, CONFLITOS E OS TRÊS PODERES                */
+/* ------------------------------------------------------------------ */
+/**
+ * Aulas publicadas; Checkpoint 04 ainda em preparação (sem `content`,
+ * sem `status: "publicada"`, sem `href`) — segue o mesmo padrão já usado
+ * nas Semanas 02 e 03 entre a publicação das aulas e a publicação do
+ * checkpoint.
+ */
+
+const semana04: Week = makeWeek({
+  number: 4,
+  title: "CIDADES, CONFLITOS E PODERES",
+  description:
+    "Uma semana para compreender como as cidades se expandem, como conflitos se organizam em diferentes escalas e como os Três Poderes estruturam decisões e controles institucionais.",
+  lessons: [
+    makeLesson({
+      weekNumber: 4,
+      number: 10,
+      pillar: "geografia",
+      title: "URBANIZAÇÃO",
+      subtitle: "Por que tanta gente decidiu morar perto de tanta gente?",
+      videoUrl: null,
+      status: "publicada",
+      content: aula10Content,
+    }),
+    makeLesson({
+      weekNumber: 4,
+      number: 11,
+      pillar: "geopolitica",
+      title: "CONFLITOS CONTEMPORÂNEOS",
+      subtitle: "Guerra é sempre a mesma coisa?",
+      videoUrl: null,
+      status: "publicada",
+      content: aula11Content,
+    }),
+    makeLesson({
+      weekNumber: 4,
+      number: 12,
+      pillar: "politica",
+      title: "OS TRÊS PODERES",
+      subtitle: "Quem decide o quê — e quem controla quem decide?",
+      videoUrl: null,
+      status: "publicada",
+      content: aula12Content,
+    }),
+  ],
+  checkpoint: makeCheckpoint(4),
+});
+
+/* ------------------------------------------------------------------ */
+/* SEMANAS 05 a 10 — estrutura editável                                 */
 /* ------------------------------------------------------------------ */
 /**
  * Para cadastrar uma semana, basta preencher `title` e trocar `lessons: []`
  * por `lessons: makeDefaultLessons(N)` (e depois editar cada aula).
  */
 
-const semanasFuturas: Week[] = [4, 5, 6, 7, 8, 9, 10].map((number) =>
+const semanasFuturas: Week[] = [5, 6, 7, 8, 9, 10].map((number) =>
   makeWeek({
     number,
     title: null,
@@ -345,6 +398,7 @@ export const course: Week[] = [
   semana01,
   semana02,
   semana03,
+  semana04,
   ...semanasFuturas,
 ];
 
