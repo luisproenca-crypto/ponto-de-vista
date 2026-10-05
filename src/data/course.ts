@@ -289,7 +289,9 @@ const semana03: Week = makeWeek({
       pillar: "geografia",
       title: "BRASIL EM MOVIMENTO",
       subtitle: "Quem vive onde — e por quê?",
-      videoUrl: null,
+      // Vídeo oficial (YouTube).
+      videoUrl: "https://youtu.be/F9NiWL-Ps8s",
+      videoTitle: "Vídeo — Aula 07: Brasil em Movimento",
       status: "publicada",
       content: aula07Content,
     }),
@@ -299,7 +301,9 @@ const semana03: Week = makeWeek({
       pillar: "geopolitica",
       title: "INFORMAÇÃO EM DISPUTA",
       subtitle: "Ver uma informação não é o mesmo que compreendê-la.",
-      videoUrl: null,
+      // Vídeo oficial (YouTube).
+      videoUrl: "https://youtu.be/4TjF5I4nDhs",
+      videoTitle: "Vídeo — Aula 08: Informação em Disputa",
       status: "publicada",
       content: aula08Content,
     }),
