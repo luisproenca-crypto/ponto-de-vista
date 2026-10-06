@@ -313,7 +313,9 @@ const semana03: Week = makeWeek({
       pillar: "politica",
       title: "ELEIÇÕES, REPRESENTAÇÃO E PARTICIPAÇÃO",
       subtitle: "Escolher representantes é a única forma de participar?",
-      videoUrl: null,
+      // Vídeo oficial (YouTube).
+      videoUrl: "https://youtu.be/nGJ1nd6LxrE",
+      videoTitle: "Vídeo — Aula 09: Especial Eleições 2026",
       status: "publicada",
       content: aula09Content,
     }),
