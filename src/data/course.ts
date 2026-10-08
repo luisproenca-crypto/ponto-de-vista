@@ -21,6 +21,9 @@ import { checkpoint03Content } from "@/data/checkpoints/semana-03-checkpoint";
 import { aula10Content } from "@/data/lessons/semana-04-aula-10";
 import { aula11Content } from "@/data/lessons/semana-04-aula-11";
 import { aula12Content } from "@/data/lessons/semana-04-aula-12";
+import { aula13Content } from "@/data/lessons/semana-05-aula-13";
+import { aula14Content } from "@/data/lessons/semana-05-aula-14";
+import { aula15Content } from "@/data/lessons/semana-05-aula-15";
 
 /**
  * ===================================================================
@@ -379,14 +382,65 @@ const semana04: Week = makeWeek({
 });
 
 /* ------------------------------------------------------------------ */
-/* SEMANAS 05 a 10 — estrutura editável                                 */
+/* SEMANA 05 — BRASIL EM REVISÃO                                       */
+/* ------------------------------------------------------------------ */
+/**
+ * Conteúdo das Aulas 13 a 15 já versionado, mas a semana ainda é futura no
+ * cronograma: as três aulas ficam `"em-preparacao"` (o site exibe "Conteúdo
+ * em preparação") até a liberação, quando bastará trocar o status para
+ * `"publicada"`. Sem videoaula por enquanto (`videoUrl: null`). Checkpoint 05
+ * também em preparação (sem `content`, sem `href`).
+ */
+
+const semana05: Week = makeWeek({
+  number: 5,
+  title: "BRASIL EM REVISÃO",
+  description:
+    "Uma semana para olhar o Brasil com as ferramentas que construímos até aqui: território, sociedade, atualidades e política conectados para compreender melhor os acontecimentos do presente.",
+  lessons: [
+    makeLesson({
+      weekNumber: 5,
+      number: 13,
+      pillar: "geografia",
+      title: "BRASIL EM REVISÃO: COMO LER O TERRITÓRIO BRASILEIRO",
+      subtitle: "Sete lentes para interpretar um país desigual e integrado.",
+      videoUrl: null,
+      status: "em-preparacao",
+      content: aula13Content,
+    }),
+    makeLesson({
+      weekNumber: 5,
+      number: 14,
+      pillar: "geopolitica",
+      title: "BRASIL NAS NOTÍCIAS: DO ACONTECIMENTO AO PROCESSO",
+      subtitle: "Como transformar a manchete em leitura geográfica.",
+      videoUrl: null,
+      status: "em-preparacao",
+      content: aula14Content,
+    }),
+    makeLesson({
+      weekNumber: 5,
+      number: 15,
+      pillar: "politica",
+      title: "COMO INTERPRETAR A POLÍTICA BRASILEIRA SEM TRANSFORMÁ-LA EM TORCIDA",
+      subtitle: "Instituições, interesses e decisões antes da opinião.",
+      videoUrl: null,
+      status: "em-preparacao",
+      content: aula15Content,
+    }),
+  ],
+  checkpoint: makeCheckpoint(5),
+});
+
+/* ------------------------------------------------------------------ */
+/* SEMANAS 06 a 10 — estrutura editável                                 */
 /* ------------------------------------------------------------------ */
 /**
  * Para cadastrar uma semana, basta preencher `title` e trocar `lessons: []`
  * por `lessons: makeDefaultLessons(N)` (e depois editar cada aula).
  */
 
-const semanasFuturas: Week[] = [5, 6, 7, 8, 9, 10].map((number) =>
+const semanasFuturas: Week[] = [6, 7, 8, 9, 10].map((number) =>
   makeWeek({
     number,
     title: null,
@@ -405,6 +459,7 @@ export const course: Week[] = [
   semana02,
   semana03,
   semana04,
+  semana05,
   ...semanasFuturas,
 ];
 
