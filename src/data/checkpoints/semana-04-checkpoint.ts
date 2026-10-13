@@ -16,8 +16,8 @@ import type { CheckpointContent } from "@/lib/types";
  * processos espaciais, classificar atores e escalas e identificar a função
  * institucional exercida em cada etapa.
  *
- * Rascunho editorial versionado, ainda não publicado em course.ts.
- * A imagem permanece nula até a arte do cenário ser aprovada.
+ * Rascunho editorial versionado e registrado em course.ts, ainda com
+ * status de preparação. A imagem permanece nula até a arte do cenário ser aprovada.
  */
 export const checkpoint04Content: CheckpointContent = {
   intro:
