@@ -336,10 +336,9 @@ const semana03: Week = makeWeek({
 /* SEMANA 04 — URBANIZAÇÃO, CONFLITOS E OS TRÊS PODERES                */
 /* ------------------------------------------------------------------ */
 /**
- * Aulas publicadas; Checkpoint 04 ainda em preparação (sem `content`,
- * sem `status: "publicada"`, sem `href`) — segue o mesmo padrão já usado
- * nas Semanas 02 e 03 entre a publicação das aulas e a publicação do
- * checkpoint.
+ * Aulas e Checkpoint 04 publicados.
+ * O checkpoint integra as Aulas 10, 11 e 12 em uma situação-problema
+ * fictícia sobre cidade, conflito, deslocamentos e instituições.
  */
 
 const semana04: Week = makeWeek({
@@ -384,6 +383,8 @@ const semana04: Week = makeWeek({
   ],
   checkpoint: {
     ...makeCheckpoint(4),
+    status: "publicada",
+    href: checkpointHref(makeCheckpoint(4)),
     content: checkpoint04Content,
   },
 });
