@@ -97,8 +97,8 @@ export const checkpoint04Content: CheckpointContent = {
         {
           id: "deslocamento",
           emoji: "🧳",
-          name: "DESLOCAMENTO FORÇADO",
-          question: "O que muda quando pessoas deixam suas casas e atravessam uma fronteira internacional?",
+          name: "DESLOCAMENTO POPULACIONAL",
+          question: "As pessoas deslocadas permanecem dentro do próprio país ou atravessam uma fronteira internacional?",
         },
         {
           id: "mediacao",
@@ -152,8 +152,8 @@ export const checkpoint04Content: CheckpointContent = {
             { id: "A", text: "metropolização e conurbação." },
             { id: "B", text: "conurbação e metropolização." },
             { id: "C", text: "hierarquia urbana e expansão urbana." },
-            { id: "D", text: "urbanização informal e rede urbana." },
-            { id: "E", text: "segregação socioespacial e hierarquia urbana." },
+            { id: "D", text: "rede urbana e segregação socioespacial." },
+            { id: "E", text: "expansão urbana e hierarquia urbana." },
           ],
           correctOptionId: "B",
           explanation:
@@ -162,122 +162,122 @@ export const checkpoint04Content: CheckpointContent = {
         {
           id: "s04-cp-q02",
           statement:
-            "Na região de Porto Novo, bairros periféricos apresentam menor acesso a transporte coletivo, saneamento e equipamentos públicos do que áreas mais valorizadas da metrópole. Esse padrão espacial é mais bem interpretado como:",
+            "Na região de Porto Novo, bairros periféricos apresentam menor acesso a transporte coletivo, saneamento e equipamentos públicos do que áreas mais valorizadas da metrópole. Considerando apenas as informações apresentadas, qual conceito explica melhor esse padrão?",
           options: [
             {
               id: "A",
-              text: "segregação socioespacial, porque diferenças sociais e de acesso a serviços aparecem distribuídas de modo desigual no território urbano.",
+              text: "Segregação socioespacial, pois infraestrutura e oportunidades aparecem distribuídas de modo desigual entre diferentes partes da região urbana.",
             },
             {
               id: "B",
-              text: "conurbação, porque toda desigualdade urbana resulta da união física entre municípios vizinhos.",
+              text: "Urbanização informal, pois a desigualdade de serviços permite concluir que os bairros periféricos se formaram fora da regulação oficial.",
             },
             {
               id: "C",
-              text: "metropolização, porque o conceito se refere exclusivamente à desigualdade entre bairros de uma mesma cidade.",
+              text: "Hierarquia urbana, pois diferenças de infraestrutura entre bairros indicam posições distintas na rede de cidades da região.",
             },
             {
               id: "D",
-              text: "hierarquia urbana, porque bairros com mais infraestrutura ocupam posição superior na rede de cidades.",
+              text: "Expansão urbana, pois a menor oferta de serviços nas periferias demonstra que a mancha urbana cresceu mais rapidamente.",
             },
             {
               id: "E",
-              text: "urbanização informal, porque a falta de um serviço público comprova que a ocupação ocorreu sem qualquer regulação oficial.",
+              text: "Metropolização, pois a concentração desigual de equipamentos públicos é suficiente para demonstrar integração funcional entre municípios.",
             },
           ],
           correctOptionId: "A",
           explanation:
-            "A alternativa A está correta. Segregação socioespacial descreve a distribuição desigual de grupos, infraestrutura, serviços e oportunidades no espaço urbano. O enunciado não informa que os bairros surgiram sem regulação, portanto não permite classificá-los automaticamente como urbanização informal. Conurbação, metropolização e hierarquia urbana respondem a outras perguntas.",
+            "A alternativa A está correta. Segregação socioespacial descreve a distribuição desigual de grupos, infraestrutura, serviços e oportunidades no espaço urbano. O enunciado não informa como os bairros foram ocupados ou regularizados, portanto não permite concluir urbanização informal. Também não apresenta dados suficientes para inferir expansão urbana, e hierarquia urbana e metropolização respondem a outras relações espaciais.",
         },
         {
           id: "s04-cp-q03",
           statement:
-            "Em Serra Norte, o governo central enfrenta um grupo regional armado dentro das próprias fronteiras do país. Famílias atingidas pelo conflito atravessam uma fronteira internacional em busca de proteção, enquanto um organismo multilateral tenta aproximar as partes para negociar. A leitura mais adequada da situação é:",
+            "Em Serra Norte, o governo central enfrenta um grupo regional armado dentro das próprias fronteiras do país. Famílias atingidas pelo conflito atravessam uma fronteira internacional em busca de proteção, enquanto um organismo multilateral tenta aproximar as partes para negociar. Segundo as distinções trabalhadas na Aula 11, a situação reúne:",
           options: [
             {
               id: "A",
-              text: "conflito interestatal, deslocamento interno e intervenção militar do organismo multilateral.",
+              text: "conflito intraestatal, deslocados internos e mediação internacional.",
             },
             {
               id: "B",
-              text: "conflito intraestatal, deslocamento através de fronteira internacional e tentativa de mediação.",
+              text: "conflito interestatal, refugiados e mediação internacional.",
             },
             {
               id: "C",
-              text: "conflito interestatal, migração pendular e ausência de atores não estatais.",
+              text: "conflito intraestatal, refugiados e mediação internacional.",
             },
             {
               id: "D",
-              text: "conflito intraestatal, conurbação regional e intervenção armada estrangeira.",
+              text: "conflito intraestatal, refugiados e intervenção militar internacional.",
             },
             {
               id: "E",
-              text: "conflito exclusivamente territorial, sem dimensão política ou humanitária.",
-            },
-          ],
-          correctOptionId: "B",
-          explanation:
-            "A alternativa B está correta. O confronto ocorre dentro de um único Estado, portanto é intraestatal. As famílias atravessam uma fronteira internacional, o que diferencia sua situação do deslocamento interno. E o organismo multilateral tenta aproximar as partes para negociação, característica de mediação, não de intervenção militar.",
-        },
-        {
-          id: "s04-cp-q04",
-          statement:
-            "O Executivo estadual anuncia o programa de acolhimento e solicita recursos; o Legislativo analisa a autorização orçamentária; depois, o Judiciário recebe uma ação que questiona a compatibilidade de um ato do programa com regras constitucionais. Essa sequência exemplifica principalmente:",
-          options: [
-            {
-              id: "A",
-              text: "subordinação do Executivo ao Judiciário, porque toda política pública depende de autorização judicial prévia.",
-            },
-            {
-              id: "B",
-              text: "substituição do Legislativo pelo Executivo, porque administrar recursos significa produzir leis.",
-            },
-            {
-              id: "C",
-              text: "independência com controle recíproco, pois cada Poder exerce função própria e pode participar de mecanismos de freios e contrapesos.",
-            },
-            {
-              id: "D",
-              text: "concentração institucional, pois os três Poderes realizam exatamente a mesma função.",
-            },
-            {
-              id: "E",
-              text: "ausência de harmonia, porque qualquer revisão judicial indica conflito entre os Poderes.",
+              text: "conflito interestatal, deslocados internos e intervenção militar internacional.",
             },
           ],
           correctOptionId: "C",
           explanation:
-            "A alternativa C está correta. O Executivo administra e executa; o Legislativo delibera sobre normas e recursos; e o Judiciário pode analisar a legalidade ou a constitucionalidade de um ato quando provocado. Essa relação não elimina a independência dos Poderes: ela integra o sistema de controle recíproco e de freios e contrapesos.",
+            "A alternativa C está correta. O confronto ocorre majoritariamente dentro de um único Estado, por isso é intraestatal. No enquadramento conceitual da Aula 11, as famílias que atravessam uma fronteira internacional em busca de proteção entram na categoria de refugiados, diferentemente dos deslocados internos. O organismo multilateral tenta facilitar a negociação sem impor uma solução pela força, o que caracteriza mediação internacional.",
         },
         {
-          id: "s04-cp-q05",
+          id: "s04-cp-q04",
           statement:
-            "Um estudante resume o caso dizendo: “Porto Novo cresceu, chegou gente de fora e o governo criou um programa; basta decidir se isso foi bom ou ruim.” Qual reformulação demonstra uma leitura mais consistente com o percurso da Semana 04?",
+            "O Executivo estadual anuncia o programa de acolhimento e solicita recursos; o Legislativo analisa a autorização orçamentária; depois, o Judiciário recebe uma ação que questiona a compatibilidade de um ato do programa com regras constitucionais. Qual sequência interpreta melhor as funções institucionais descritas?",
           options: [
             {
               id: "A",
-              text: "Primeiro é preciso identificar os processos urbanos, a natureza e a escala do conflito, os atores envolvidos e a função institucional exercida por cada Poder antes de avaliar os resultados.",
+              text: "Execução administrativa → deliberação legislativa sobre recursos → controle judicial de legalidade ou constitucionalidade.",
             },
             {
               id: "B",
-              text: "A questão urbana é suficiente para explicar todo o caso, porque conflitos e instituições são consequências automáticas do crescimento das cidades.",
+              text: "Execução legislativa → administração executiva dos recursos → fiscalização política exercida pelo Judiciário.",
             },
             {
               id: "C",
-              text: "Como há diferentes opiniões sobre o programa, nenhuma análise objetiva das instituições ou dos processos espaciais é possível.",
+              text: "Administração executiva → controle judicial do orçamento → elaboração legislativa do ato administrativo questionado.",
             },
             {
               id: "D",
-              text: "O ponto central é descobrir qual dos três Poderes tem mais autoridade, pois os demais atuam apenas quando o Poder principal permite.",
+              text: "Execução administrativa → deliberação legislativa sobre recursos → transferência da gestão do programa ao Judiciário.",
             },
             {
               id: "E",
-              text: "A presença de um conflito em outro país torna irrelevante analisar a organização interna da região metropolitana.",
+              text: "Administração executiva → decisão judicial sobre recursos → fiscalização constitucional exercida pelo Legislativo.",
             },
           ],
           correctOptionId: "A",
           explanation:
-            "A alternativa A está correta. A Semana 04 não propõe escolher um lado antes de compreender o caso: ela ensina a separar processos urbanos, escalas e atores de um conflito e funções institucionais dos três Poderes. Só depois dessa organização conceitual é possível avaliar argumentos e consequências com mais precisão.",
+            "A alternativa A está correta. O Executivo administra e executa políticas; o Legislativo delibera sobre normas e recursos; e o Judiciário pode analisar a legalidade ou a constitucionalidade de um ato quando provocado. Esse controle não transfere ao Judiciário a administração do programa e não elimina a independência entre os Poderes.",
+        },
+        {
+          id: "s04-cp-q05",
+          statement:
+            "A chegada das famílias deslocadas aumenta a demanda por moradia, transporte e serviços na área integrada de Porto Novo e Ribeira. Qual interpretação articula corretamente os três eixos estudados na Semana 04?",
+          options: [
+            {
+              id: "A",
+              text: "A rede metropolitana distribui efeitos entre municípios; um conflito intraestatal pode produzir deslocamento internacional; e a resposta pública mobiliza competências distintas dos três Poderes.",
+            },
+            {
+              id: "B",
+              text: "A continuidade física entre Porto Novo e Ribeira forma um único município; o conflito permanece intraestatal; e os três Poderes atuam em etapas diferentes da resposta pública.",
+            },
+            {
+              id: "C",
+              text: "A rede metropolitana conecta os municípios; o cruzamento da fronteira transforma o conflito em interestatal; e Executivo, Legislativo e Judiciário mantêm funções institucionais distintas.",
+            },
+            {
+              id: "D",
+              text: "A integração urbana distribui efeitos entre municípios; o conflito é intraestatal; e a revisão judicial transfere ao Judiciário a administração do programa de acolhimento.",
+            },
+            {
+              id: "E",
+              text: "A chegada das famílias explica a segregação existente na metrópole; o conflito produz efeitos transfronteiriços; e a resposta estatal depende apenas da decisão do Executivo.",
+            },
+          ],
+          correctOptionId: "A",
+          explanation:
+            "A alternativa A está correta porque articula os três planos sem confundi-los: Porto Novo e Ribeira integram uma rede metropolitana; um conflito pode continuar intraestatal mesmo quando seus efeitos atravessam fronteiras; e a resposta pública envolve funções diferentes do Executivo, do Legislativo e do Judiciário. As demais alternativas introduzem um erro de escala, de organização urbana, de causalidade ou de competência institucional.",
         },
       ],
     },
