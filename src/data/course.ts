@@ -18,6 +18,7 @@ import { aula07Content } from "@/data/lessons/semana-03-aula-07";
 import { aula08Content } from "@/data/lessons/semana-03-aula-08";
 import { aula09Content } from "@/data/lessons/semana-03-aula-09";
 import { checkpoint03Content } from "@/data/checkpoints/semana-03-checkpoint";
+import { checkpoint04Content } from "@/data/checkpoints/semana-04-checkpoint";
 import { aula10Content } from "@/data/lessons/semana-04-aula-10";
 import { aula11Content } from "@/data/lessons/semana-04-aula-11";
 import { aula12Content } from "@/data/lessons/semana-04-aula-12";
@@ -381,7 +382,10 @@ const semana04: Week = makeWeek({
       content: aula12Content,
     }),
   ],
-  checkpoint: makeCheckpoint(4),
+  checkpoint: {
+    ...makeCheckpoint(4),
+    content: checkpoint04Content,
+  },
 });
 
 /* ------------------------------------------------------------------ */
