@@ -27,32 +27,51 @@ import type { LessonContent } from "@/lib/types";
  * slogan ou avaliação de governo. Decisões governamentais e empresariais
  * aparecem como atos, interesses e efeitos, sem juízo de valor.
  *
- * DADOS FACTUAIS (verificados em fonte primária; REVISAR ANTES DE PUBLICAR
- * porque são fatos de 2025–2026):
- *   • Tarifa dos EUA: USTR, aviso no Federal Register de 20/07/2026 (Seção
- *     301; tarifa de 25% sobre importações do Brasil, com exceções, em vigor
- *     desde 22/07/2026; temas investigados incluem desmatamento ilegal).
- *   • Acordo UE–Mercosul: Comissão Europeia e Conselho da UE (Decisão de
- *     09/01/2026); Acordo Comercial Interino em aplicação provisória desde
- *     01/05/2026. Parecer do Tribunal de Justiça da UE ainda pendente.
- *   • China principal destino das exportações: MDIC (balança comercial de
- *     2025).
+ * DADOS FACTUAIS (verificados em fonte primária ou institucional, conferidos
+ * em 13/10/2026; REVISAR ANTES DE PUBLICAR porque são fatos de 2025–2026):
+ *   • Tarifas dos EUA: duas medidas distintas, ambas da Seção 301. (1) USTR,
+ *     aviso de 20/07/2026 (91 FR 45516): 25% sobre importações do Brasil, com
+ *     exceções, em vigor desde 22/07/2026; entre os temas investigados está o
+ *     desmatamento ilegal. (2) Aviso de 28/07/2026 (91 FR 47318, investigação
+ *     sobre proibição de importação de bens de trabalho forçado, 54
+ *     economias): 12,5% sobre produtos do Brasil, com exceções, em vigor
+ *     desde 24/07/2026. A aula não soma percentuais. Negociação em curso
+ *     (grupo de trabalho criado em 30/09/2026); consultas do Brasil na OMC.
+ *   • Acordo UE–Mercosul: Conselho da UE autorizou a assinatura em
+ *     09/01/2026; o Parlamento Europeu pediu parecer ao TJUE em 21/01/2026
+ *     (Parecer 1/26, pendente); o acordo comercial interino é aplicado
+ *     provisoriamente desde 01/05/2026 (Decreto 12.953/2026 no Brasil); a
+ *     vigência definitiva depende do consentimento do Parlamento Europeu, e
+ *     o acordo de parceria mais amplo, de ratificações nacionais. Ação da
+ *     Polônia (C-460/26): pedido de suspensão negado em 29/09/2026; o mérito
+ *     segue pendente.
+ *   • China principal destino das exportações: 28,7% do total em 2025 (MDIC).
  *   • Serra Verde / Pela Ema (Minaçu, GO): USA Rare Earth, 8-K e comunicado
- *     de 04/09/2026 (fusão fechada em 03/09/2026).
- *   • Morpho, bloco FZA-M-59: Petrobras, 6-K de 02/10/2026 (nova descoberta,
- *     após a de agosto de 2026; análises em andamento, sem viabilidade
- *     comercial estabelecida); licença do Ibama de outubro de 2025.
- *   • BEN 2026 (EPE, 03/06/2026): 86,8% de renováveis na matriz elétrica e
- *     cerca de 49,4% na matriz energética, em 2025.
- *   • COP30 em Belém (novembro de 2025); TFFF: MMA/COP30 (regra de 20% do
- *     valor repassado a cada país para povos indígenas e comunidades
- *     locais). Valores totais do fundo deliberadamente NÃO citados.
+ *     de 04/09/2026 (combinação empresarial concluída em 03/09/2026).
+ *   • Minerais críticos: Lei 15.506, sancionada em 16/09/2026, institui a
+ *     Política Nacional de Minerais Críticos e Estratégicos e o Cimce
+ *     (Decreto 13.118/2026 regulamenta o conselho). Objetivos citados pelo
+ *     Senado: cadeia produtiva, agregação de valor em território nacional e
+ *     soberania.
+ *   • Morpho, bloco FZA-M-59: Petrobras, comunicados de 14/08/2026
+ *     (presença de hidrocarbonetos) e 02/10/2026 (mais um intervalo com
+ *     petróleo, mais profundo); poço em avaliação, sem volume nem
+ *     comercialidade estabelecidos; licença do Ibama (LO 1.684/2025) de
+ *     20/10/2025.
+ *   • BEN 2026 (EPE, Síntese de 03/06/2026): 86,8% de renováveis na matriz
+ *     elétrica e 49,4% na matriz energética, em 2025 (a página da EPE traz
+ *     49,5%).
+ *   • COP30 em Belém (novembro de 2025); TFFF lançado pelo Brasil em
+ *     06/11/2025 (Cúpula de Líderes), ainda em estruturação e captação, com
+ *     a regra de pelo menos 20% dos pagamentos para povos indígenas e
+ *     comunidades locais. Valores totais do fundo deliberadamente NÃO
+ *     citados.
  *   • Prodes 2025 consolidado: INPE, 5.731 km² na Amazônia Legal, queda de
- *     12,07% em relação a 2024.
+ *     12,07% em relação a 2024, no período de 01/08/2024 a 31/07/2025.
  * Tornados qualitativos de propósito (perecíveis): total mobilizado pelo
- * TFFF, valor da compra da Serra Verde, tramitação do projeto de lei de
- * minerais críticos, fases anteriores das tarifas dos EUA, números exatos
- * de exportação e distâncias do poço.
+ * TFFF, valor da combinação da Serra Verde, valores e prazos da Lei 15.506,
+ * percentuais das tarifas dos EUA, números exatos de exportação e distâncias
+ * do poço.
  *
  * Título, descrição, vídeo e status ficam em `src/data/course.ts`
  * (metadados da aula). Este arquivo guarda somente o conteúdo pedagógico.
@@ -193,7 +212,7 @@ export const aula14Content: LessonContent = {
         id: "mercados-dependencia",
         title: "O que o Brasil vende, e para quem?",
         content:
-          "Em 2026, uma tarifa dos Estados Unidos sobre parte dos produtos brasileiros e um acordo comercial com a União Europeia, em aplicação provisória desde maio, foram notícia. O processo é mais antigo: quando muitas vendas dependem de poucos compradores (hoje, a China é o principal destino), uma decisão externa pode mudar muita coisa dentro do país. Daí a busca por novos mercados: diversificar não é romper, reduz a vulnerabilidade, e a interdependência continua. O efeito varia com o produto, a região e o porto por onde sai. Lentes da Aula 13: infraestrutura e integração territorial; diversidade regional; território, economia e sociedade.",
+          "Em 2026, os Estados Unidos adotaram medidas tarifárias distintas sobre parte dos produtos brasileiros, e a parte comercial do acordo entre o Mercosul e a União Europeia (o acordo interino) passou a ser aplicada provisoriamente em 1º de maio, sem vigência definitiva do acordo mais amplo. O processo é mais antigo: quando muitas vendas dependem de poucos compradores (em 2025, a China foi o principal destino), uma decisão externa pode mudar muita coisa dentro do país. Daí a busca por novos mercados: diversificar não é romper, reduz a vulnerabilidade, e a interdependência continua. O efeito varia com o produto, a região e o porto.",
         flow: [
           "Local: o produtor e o município",
           "Regional: o corredor até o porto",
@@ -206,7 +225,7 @@ export const aula14Content: LessonContent = {
         id: "minerais-cadeia",
         title: "Ter o recurso é controlar a cadeia?",
         content:
-          "Em setembro de 2026, uma empresa dos Estados Unidos concluiu a compra da operadora da mina de terras raras de Pela Ema, em Minaçu (GO). O processo: do recurso ao produto final há etapas (extração, processamento, ímãs), e quem domina as etapas controla a cadeia, nem sempre quem tem o minério. Empresas buscam fornecimento, países buscam reduzir dependências, e o Brasil debate como combinar investimento externo e processamento no país. Quem sente primeiro é a cidade mineradora. Em Carajás (Aula 13), a pergunta era por onde o recurso sai; aqui, é também quem o transforma. Lentes da Aula 13: território, economia e sociedade; infraestrutura e integração territorial.",
+          "Em setembro de 2026, uma empresa dos Estados Unidos concluiu a combinação empresarial com a Serra Verde, operadora da mina de terras raras de Pela Ema (GO). O processo: do recurso ao produto final há etapas (extração, processamento, ímãs), e controla a cadeia quem domina as etapas, nem sempre quem tem o minério. No Brasil, o debate virou política pública: a Lei nº 15.506, sancionada em 16 de setembro de 2026, institui a Política Nacional de Minerais Críticos e Estratégicos, voltada ao beneficiamento, à transformação e à agregação de valor no país. Em Carajás (Aula 13), a pergunta era por onde o recurso sai; aqui, é também quem investe e onde se transforma.",
         flow: [
           "Local: a mina e a cidade",
           "Regional: o estado e seus acessos",
@@ -219,7 +238,7 @@ export const aula14Content: LessonContent = {
         id: "energia-transicao",
         title: "Matriz renovável e petróleo podem coexistir?",
         content:
-          "Na Foz do Amazonas, ao largo do Amapá, a Petrobras, com licença do Ibama, informou duas descobertas de petróleo no mesmo poço, em agosto e outubro de 2026. Descoberta não é reserva comercial, e reserva comercial não é produção: as análises continuam. O processo: a transição energética não é substituição instantânea; fontes, interesses e prazos diferentes coexistem. Em 2025, cerca de 87% da eletricidade foi renovável, mas as renováveis ficaram perto de metade de toda a energia. Quem sente muda com a escala: no Amapá, empregos e riscos ambientais; no país, receitas e segurança energética; no mundo, clima e oferta de petróleo. Lentes da Aula 13: infraestrutura e integração territorial; território, economia e sociedade.",
+          "Na Foz do Amazonas, ao largo do Amapá, a Petrobras, com licença do Ibama, identificou hidrocarbonetos em um poço em agosto de 2026 e, em outubro, comunicou nova descoberta de petróleo em intervalo mais profundo do mesmo poço. A avaliação exploratória continua: descoberta não é reserva comercial, e reserva comercial não é produção. O processo: a transição energética não é substituição instantânea; fontes, interesses e prazos diferentes coexistem. Em 2025, cerca de 87% da eletricidade foi renovável, mas as renováveis ficaram perto de metade de toda a energia. Os efeitos possíveis mudam com a escala: no Amapá, empregos e riscos ambientais; no país, receitas e segurança energética; no mundo, clima e oferta de petróleo.",
         flow: [
           "Local: o litoral do Amapá",
           "Regional: a Margem Equatorial",
@@ -232,7 +251,7 @@ export const aula14Content: LessonContent = {
         id: "amazonia-clima",
         title: "O mesmo território pode ser local, nacional e global?",
         content:
-          "Em 2025, a COP30, conferência do clima da ONU, aconteceu em Belém e lançou o TFFF, fundo para pagar a países que mantêm florestas tropicais em pé, com parte do valor para povos indígenas e comunidades locais. No mesmo ano, o desmatamento anual da Amazônia Legal caiu cerca de 12% frente a 2024, segundo o Prodes/INPE. O processo: a floresta é território brasileiro e também interessa ao clima do planeta. O debate junta soberania, interesse global, financiamento e as pessoas que vivem ali, as primeiras a sentir os efeitos. Como na Aula 01, território é espaço de apropriação, controle e disputa. Lentes da Aula 13: formação do território; desigualdades socioespaciais.",
+          "Em 2025, durante a COP30, conferência do clima da ONU em Belém, o Brasil lançou o TFFF, fundo pensado para pagar a países que mantêm florestas tropicais em pé, com pelo menos 20% dos pagamentos reservados a povos indígenas e comunidades locais; o fundo ainda está em estruturação e captação. De 1º de agosto de 2024 a 31 de julho de 2025, período do Prodes/INPE, o desmatamento da Amazônia Legal caiu cerca de 12% frente ao período anterior. O processo: a floresta é território brasileiro e também interessa ao clima do planeta; o debate junta soberania, interesse global, financiamento e quem vive ali, o primeiro a sentir os efeitos. Como na Aula 01, território é espaço de apropriação, controle e disputa.",
         flow: [
           "Local: terras indígenas e comunidades",
           "Regional: a Amazônia Legal",
