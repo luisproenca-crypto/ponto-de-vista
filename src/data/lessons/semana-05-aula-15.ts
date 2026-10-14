@@ -7,10 +7,12 @@ import type { LessonContent } from "@/lib/types";
  * Ideia central: antes de decidir o que pensar sobre um acontecimento político,
  * o aluno o analisa com cinco perguntas: COMPETÊNCIA, CAMINHO, AFIRMAÇÃO,
  * INTERESSES e EFEITOS. A aula não diz o que pensar; mostra o que olhar antes.
- * Pergunta-guia (abre e fecha a aula): "Como analisar um acontecimento político
- * antes de decidir o que pensar sobre ele?"
- * Progressão: Aula 13 (onde e por que aqui?) → Aula 14 (de que processo isso
- * faz parte?) → Aula 15 (quem decide, por qual caminho, como avaliar o que se diz?).
+ * Pergunta-guia (em `connection` e `missionCheck`): "Como analisar um
+ * acontecimento político antes de decidir o que pensar sobre ele?"
+ * Progressão: Aula 13 (onde?) → Aula 14 (de que processo?) → Aula 15 (quem
+ * decide, por qual caminho, como avaliar o que se diz?). Pontes: Aula 03
+ * (União, estados e municípios), Aula 08 (dado, interpretação, opinião) e
+ * Aula 12 (Poderes e sanção).
  * Treino (abertura e questão final) é fictício; o único caso real é a Lei Seca
  * (2008 a 2012), no deepDive, usado só para mostrar o caminho institucional.
  *
@@ -18,29 +20,33 @@ import type { LessonContent } from "@/lib/types";
  * parlamentar ou autoridade é citado; interesses são categorias de análise,
  * não declarações atribuídas a grupos.
  *
- * DADOS FACTUAIS (verificados em textos oficiais; planalto.gov.br ficou
- * indisponível, então foram lidos no Senado e na Câmara):
- *   • MP 415, de 21/01/2008 (Senado, texto da norma): proíbe a comercialização
- *     de bebidas alcoólicas em rodovias federais e acresce dispositivo ao
- *     Código de Trânsito; art. 7º: vigência na data da publicação.
- *   • Congresso Nacional (ficha): Câmara aprova em 23/04/2008 na forma do PLV
- *     13/2008; não há votação do Senado registrada, por isso a aula diz só
- *     "após apreciação pelo Congresso". Regras da MP (até 120 dias, perda de
- *     validade): Câmara, "Entenda o processo legislativo".
- *   • Lei 11.705, de 19/06/2008 (DOU de 20/06): veto parcial; a ementa altera
- *     o Código de Trânsito e a Lei 9.294/1996 "para inibir o consumo de bebida
- *     alcoólica por condutor de veículo automotor".
- *   • STJ, março de 2012 (notícia do STJ; o órgão julgador não é citado
- *     porque as fontes divergem).
- *   • Lei 12.760, de 20/12/2012 (publicação original, via Câmara): altera os
- *     arts. 165, 262, 276, 277 e 306 do CTB; art. 306, §2º, meios de prova e
- *     contraprova. Projeto de origem: PL 5.607/2009.
- *   • Estudo de 2010 (resumo): SIM; jul/2007 a jun/2008 contra jul/2008 a
- *     jun/2009; taxa padronizada -7,4% (país) e -11,8% (capitais); texto
- *     integral não lido.
- * FORA por falta de confirmação: votação no Senado da MP, desfecho das ADIs no
- * STF, limites numéricos de álcool, artigos constitucionais, fatos posteriores
- * a 2012.
+ * DADOS FACTUAIS (planalto.gov.br ficou indisponível; fontes: Congresso
+ * Nacional, Senado e Câmara):
+ *   • MP 415, de 21/01/2008 (DOU 22/01): ementa "proíbe a comercialização de
+ *     bebidas alcoólicas em rodovias federais" e altera o Código de Trânsito;
+ *     60 dias, prorrogados por ato da Mesa de 27/03/2008 (06/02 a 04/06/2008).
+ *   • Câmara aprova em 23/04/2008 (PLV 13/2008); a ficha não registra o voto do
+ *     Senado, por isso a aula diz só que o Congresso "precisava convertê-la".
+ *   • Lei 11.705, de 19/06/2008 (DOU 20/06): origem MPV 415; "veta
+ *     parcialmente" (Mensagem 404/2008); altera o CTB e a Lei 9.294/1996.
+ *   • STJ, março de 2012: REsp 1.111.566/DF, Terceira Seção, 28/03/2012 (ConJur;
+ *     página do STJ não obtida). A aula descreve só o efeito prático (bafômetro
+ *     ou exame de sangue como prova do crime) e NÃO atribui fundamento jurídico
+ *     nem nomeia o órgão: nenhuma fonte lida confirma o fundamento no acórdão.
+ *   • Lei 12.760, de 20/12/2012 (DOU 21/12): altera arts. 165, 262, 276, 277 e
+ *     306 do CTB; art. 306, §2º, meios de prova e contraprova. Origem: PL
+ *     5.607/2009 (PLC 27/2012 no Senado).
+ *   • Reportagem de 12/12/2012 (Congresso em Foco) liga a mudança à decisão do
+ *     STJ; o parecer do Senado não foi lido. A aula NÃO afirma nem nega a causa:
+ *     separa a ordem dos fatos do motivo documentado.
+ *   • Estudo de 2010 (Malta et al., Epidemiol. Serv. Saúde 19(4)): SIM;
+ *     jul/2007-jun/2008 contra jul/2008-jun/2009; taxa padronizada -7,4%
+ *     (país) e -11,8% (capitais); só o resumo foi lido.
+ *   • STF: ADIs 4.017 e 4.103 (ficha da Câmara), julgadas em 2022. A aula só
+ *     diz que a lei foi contestada no STF, fora do recorte.
+ * FORA por falta de confirmação: voto do Senado na MP, fundamento jurídico do
+ * STJ, parecer do Senado, limites numéricos de álcool, artigos constitucionais,
+ * fatos posteriores a 2012.
  *
  * Título, subtítulo, descrição, vídeo e status ficam em `src/data/course.ts`.
  * Esta aula ainda não está publicada (`status: "em-preparacao"`).
@@ -59,39 +65,39 @@ export const aula15Content: LessonContent = {
         question:
           "Em Pedra Alta, cidade fictícia, uma notícia diz: “Prefeitura anuncia reforma do terminal de ônibus.” Um morador comenta: “Finalmente! Vai resolver o trânsito do centro.” Outro responde: “Mais uma obra que não sai do papel.” Antes de concordar com um dos dois, qual pergunta ajuda mais?",
         options: [
-          { id: "quem-tem-razao", label: "Qual dos dois comentários parece ter mais razão?" },
-          { id: "o-que-confere", label: "O que, nessa notícia, dá para conferir em documento ou registro?" },
-          { id: "curtidas", label: "Qual dos dois comentários teve mais curtidas e respostas?" },
-          { id: "quem-mora-perto", label: "Qual dos dois moradores vive mais perto do terminal?" },
+          { id: "quem-tem-razao", label: "Qual dos dois comentários parece ter mais razão neste caso?" },
+          { id: "curtidas", label: "Qual dos dois comentários recebeu mais curtidas e respostas?" },
+          { id: "o-que-confere", label: "O que dá para conferir em documento, nos dois comentários?" },
+          { id: "usa-terminal", label: "Qual dos dois moradores usa mais o terminal no dia a dia?" },
         ],
         reveal:
-          "Começar por “quem tem razão” é escolher um lado antes de olhar. Os dois comentários falam do futuro (“vai resolver”, “não sai do papel”), e isso não dá para conferir hoje. Dá para conferir o que já aconteceu: a reforma foi só anunciada? Foi aprovada? Tem verba? Curtidas medem alcance, não veracidade, e morar perto dá uma posição, não uma prova.",
+          "Começar por “quem tem razão” é escolher um lado antes de olhar. “Vai resolver” é uma previsão: só se confere depois da obra. “Mais uma obra” fala do passado, e isso dá para conferir: que obras foram anunciadas, e quais saíram? Curtidas medem alcance, e usar o terminal dá experiência, não prova.",
       },
       {
         id: "aprovada-e-agora",
         question:
-          "A prefeitura informa que a Câmara de Vereadores aprovou o projeto da reforma, mas a verba depende de um repasse do governo do estado, ainda não liberado. O que dá para dizer sobre a reforma?",
+          "A prefeitura informa que a Câmara de Vereadores aprovou a lei que destina verba à reforma, mas parte do dinheiro depende de um repasse do governo do estado, ainda não liberado. O que dá para dizer sobre a reforma?",
         options: [
-          { id: "garantida", label: "Está garantida, porque a Câmara já aprovou o projeto" },
-          { id: "etapa", label: "Cumpriu uma etapa e ainda depende de uma decisão do estado" },
-          { id: "sem-futuro", label: "Não vai sair, porque o repasse ainda não foi liberado pelo estado" },
-          { id: "em-andamento", label: "Está em andamento, porque a prefeitura já anunciou a reforma" },
+          { id: "pode-comecar", label: "Pode começar já: o terminal é de responsabilidade da prefeitura" },
+          { id: "etapa", label: "Cumpriu uma etapa: ainda falta o estado decidir sobre o repasse" },
+          { id: "formalidade", label: "Está praticamente decidida: o repasse do estado é só formalidade" },
+          { id: "cancelada", label: "Deve ser cancelada: o repasse do estado ainda não foi liberado" },
         ],
         reveal:
-          "Anunciar, aprovar, liberar a verba e executar a obra são etapas diferentes, e podem ter responsáveis diferentes. Aqui, a cidade decidiu uma parte e o estado decide outra. Etapa cumprida não garante a seguinte, e etapa pendente também não encerra o assunto.",
+          "Anunciar, aprovar, liberar a verba e executar a obra são etapas diferentes, e podem ter responsáveis diferentes. Aqui, o município cumpriu a sua parte e o estado decide outra. Ser da responsabilidade da prefeitura não libera o dinheiro, e a etapa pendente também não encerra o assunto.",
       },
       {
         id: "quem-sente",
         question:
-          "Durante a obra, o terminal ficará fechado por seis meses. Quem será afetado, e como?",
+          "Durante a obra, o terminal ficará fechado por seis meses, e os ônibus vão parar em uma rua vizinha, com comércio e moradias. Para entender os efeitos da obra, qual pergunta ajuda mais?",
         options: [
-          { id: "passageiros", label: "Os passageiros, que perdem o ponto de embarque durante a obra" },
-          { id: "varios", label: "Passageiros, comerciantes e prefeitura, cada um de um modo, e alguns efeitos só depois" },
-          { id: "moradores", label: "Os moradores do bairro, por causa do barulho e da poeira da obra" },
-          { id: "depende-opiniao", label: "Depende de achar a reforma boa ou ruim para a cidade" },
+          { id: "boa-ou-ruim", label: "Em resumo, a reforma é boa ou ruim para a cidade como um todo?" },
+          { id: "competencia", label: "A prefeitura tem competência para fechar o terminal por seis meses?" },
+          { id: "grupos", label: "Que grupos mudam de situação com a obra, onde e por quanto tempo?" },
+          { id: "custo", label: "Quanto a obra vai custar e qual instituição vai pagar essa conta?" },
         ],
         reveal:
-          "Cada grupo ocupa um lugar diferente na mesma decisão: o passageiro quer rapidez, o comerciante quer movimento, a prefeitura quer concluir a obra. Ter interesse não é agir de má-fé. E os efeitos mudam com o lugar e com o tempo. Essas perguntas têm nome. Vamos conhecê-las.",
+          "Os efeitos mudam com o grupo, o lugar e o tempo. O passageiro sente o fechamento durante a obra; o comerciante da rua vizinha pode ganhar movimento agora e perder depois; quem mora ali convive com o barulho. Essas perguntas têm nome. Vamos conhecê-las.",
       },
     ],
   },
@@ -99,21 +105,21 @@ export const aula15Content: LessonContent = {
   connection: {
     title: "DO LUGAR À DECISÃO",
     flow: ["Onde", "Que processo", "Quem decide", "Que caminho", "Que interesses", "O que se afirma", "Que efeitos"],
-    highlight: "Primeiro entender. Depois opinar.",
-    text: "Você já sabe perguntar onde isso acontece e por que ali (Aula 13), e de que processo mais longo o fato faz parte (Aula 14). Falta perguntar quem pode decidir, por qual caminho, com que interesses e como avaliar o que está sendo dito. A pergunta desta aula é: “Como analisar um acontecimento político antes de decidir o que pensar sobre ele?” As cinco perguntas não dizem o que pensar. Mostram o que olhar antes.",
+    highlight: "Cada pergunta acrescenta uma camada à leitura.",
+    text: "Na Aula 13, você perguntou onde. Na Aula 14, de que processo o fato faz parte. Falta perguntar quem pode decidir, por qual caminho, o que se afirma, com que interesses e com que efeitos. A pergunta desta aula é: “Como analisar um acontecimento político antes de decidir o que pensar sobre ele?” As cinco perguntas não dizem o que pensar. Mostram o que olhar antes.",
   },
 
   lenses: {
-    eyebrow: "Cinco perguntas antes de opinar",
+    eyebrow: "Cinco perguntas para ler a decisão",
     title: "NOMEIE O QUE VOCÊ PRECISA OLHAR",
     subtitle:
-      "Três perguntas são novas: competência, caminho e afirmação. Duas você já usa desde a Aula 14: interesses e efeitos.",
+      "Três perguntas entram agora: competência, caminho e afirmação. Duas retomam a Aula 14: interesses e, nas escalas, os efeitos.",
     items: [
       {
         id: "competencia",
         emoji: "🏛️",
         name: "COMPETÊNCIA",
-        question: "Quem pode decidir isso, e em qual nível: município, estado ou União?",
+        question: "Qual instituição pode decidir isso, e em qual nível: município, estado ou União?",
       },
       {
         id: "caminho",
@@ -141,7 +147,7 @@ export const aula15Content: LessonContent = {
       },
     ],
     highlight:
-      "As cinco perguntas não tiram sua liberdade de discordar. Dão mais informação para isso.",
+      "Cada pergunta ilumina uma parte da decisão. A leitura vem das cinco juntas.",
     image: null,
     hideImage: true,
   },
@@ -150,7 +156,7 @@ export const aula15Content: LessonContent = {
     title: "AGORA, VAMOS ANALISAR ANTES DE OPINAR",
     paragraphs: [
       "Você já tem as cinco perguntas. Agora vamos usá-las em um caso real e bem documentado: a Lei Seca, entre 2008 e 2012. Como as etapas estão registradas, dá para ver cada decisão e cada afirmação.",
-      "A pergunta não é se a lei foi boa ou ruim. É como ler cada passo e cada frase antes de formar uma opinião.",
+      "Vamos ler cada passo e cada frase do caso, sem julgar a lei.",
     ],
   },
 
@@ -161,15 +167,15 @@ export const aula15Content: LessonContent = {
         id: "competencia",
         name: "COMPETÊNCIA",
         conceito:
-          "Competência é o poder que a lei dá a uma instituição para decidir sobre um assunto. Na Aula 12, você viu que cada Poder tem uma função; prefeituras, estados e União também têm competências diferentes. Quem anuncia pode não ser quem decide, e uma decisão pode depender de mais de uma instituição.",
+          "Competência é o poder que a lei dá a uma instituição para decidir sobre um assunto. Isso vale para os Poderes (Aula 12) e para os níveis da federação: município, estado e União (Aula 03). Quem anuncia pode não ser quem decide, e uma decisão pode depender de mais de uma instituição.",
         penseAssim:
-          "Pergunte: quem pode decidir isso e em qual nível? Alguém mais precisa aprovar, liberar verba, regulamentar ou fiscalizar?",
+          "Localize a decisão: qual instituição pode tomá-la, em qual nível, e se alguém mais precisa aprovar, liberar verba, regulamentar ou fiscalizar.",
         exemplo:
-          "Uma prefeitura planeja a reforma de um terminal, mas a verba vem do estado. Liberar o dinheiro é decisão de outra instituição.",
+          "Uma prefeitura planeja a reforma de um terminal, mas parte da verba vem do estado. Liberar esse dinheiro é decisão de outra instituição.",
         naoConfunda:
-          "Poder decidir não é o mesmo que decidir bem. A competência responde “quem pode”. Se a decisão foi boa ou ruim é outra pergunta, que depende de evidências e de valores.",
+          "Competência responde “quem pode decidir”, e não “se decidiu bem”. Essa segunda pergunta depende de evidências e de valores.",
         naProva:
-          "Fique atento a enunciados em que uma instituição anuncia e outra decide: a questão pode testar se você separa quem anuncia de quem pode decidir.",
+          "Quando um enunciado diz que uma instituição anunciou e outra decide, a questão pode testar se você separa as duas.",
       },
       {
         id: "caminho",
@@ -177,55 +183,55 @@ export const aula15Content: LessonContent = {
         conceito:
           "Caminho é a sequência de etapas pelas quais uma decisão passa até produzir efeito. Anunciar, aprovar, entrar em vigor e produzir o efeito prometido são coisas diferentes, e uma etapa cumprida não garante a seguinte.",
         penseAssim:
-          "Pergunte: em que etapa está? O que já aconteceu, o que ainda falta e quem decide a próxima etapa?",
+          "Em que etapa está? O que já aconteceu, o que ainda falta e quem decide a próxima?",
         exemplo:
-          "No terminal fictício, a Câmara de Vereadores aprovou o projeto, mas a verba ainda depende do estado: uma etapa cumprida e outra pendente.",
+          "No terminal fictício, a Câmara de Vereadores aprovou a lei que destina verba à reforma, mas o repasse do estado ainda não saiu: uma etapa cumprida e outra pendente.",
         naoConfunda:
-          "A ordem das etapas pode variar. No caso da Lei Seca, a medida provisória já valia antes de o Congresso apreciá-la.",
+          "A ordem das etapas pode variar. No caso da Lei Seca, a medida provisória já valia antes de o Congresso decidir sobre ela.",
         naProva:
-          "Fique atento às palavras do enunciado: “anunciou”, “aprovou”, “sancionou”, “entrou em vigor”. Cada uma marca uma etapa diferente.",
+          "As palavras do enunciado marcam a etapa: “anunciou”, “aprovou”, “sancionou”, “entrou em vigor”. Cada uma é um momento diferente.",
       },
       {
         id: "afirmacao",
         name: "AFIRMAÇÃO",
         conceito:
-          "Afirmação é o que alguém diz sobre um acontecimento. Há cinco tipos. Fato: pode ser conferido em documento, registro ou medição. Interpretação: explica o que o fato significa ou por que ocorreu. Argumento: defende uma conclusão com razões. Previsão: diz o que vai acontecer. Opinião: expressa uma avaliação, como “bom” ou “justo”.",
+          "Afirmação é o que alguém diz sobre um acontecimento. Na Aula 08, você separou dado, interpretação e opinião; aqui entram argumento e previsão. Fato: dá para conferir em documento ou registro. Interpretação: explica o que o fato significa. Argumento: defende uma conclusão com razões. Previsão: diz o que vai acontecer. Opinião: avalia, como “bom” ou “justo”.",
         penseAssim:
-          "Cada tipo pede uma pergunta. Fato: é verificável? Interpretação: como o fato é explicado? Argumento: que conclusão se defende, com quais razões? Previsão: em que evidências e premissas se apoia? Opinião: que avaliação se expressa?",
+          "Cada tipo pede uma pergunta: dá para conferir? O que explica? Que razões apresenta? Em que se apoia? Que avaliação expressa?",
         exemplo:
-          "“A Câmara aprovou o projeto” é um fato. “A cidade quer melhorar o transporte” é uma interpretação. “Como o terminal é antigo, a reforma deve ser feita” é um argumento. “O trânsito vai melhorar” é uma previsão. “É a melhor escolha” é uma opinião.",
+          "Fato: o registro da Câmara mostra a lei aprovada. Previsão: um vereador diz que o trânsito vai melhorar. Interpretação: um jornal escreve que a aprovação mostra prioridade ao transporte. Argumento: um morador diz que a reforma deve ser feita, porque o terminal é antigo. Opinião: outro diz que é “a melhor escolha”.",
         naoConfunda:
-          "Os cinco tipos não formam uma escala do mais ao menos verdadeiro: previsão e opinião não são piores que o fato, pedem outra pergunta. Também não confunda: alguém afirmar que algo ocorreu não prova que ocorreu, e uma frase compartilhada por muita gente não fica mais verdadeira por isso.",
+          "Os cinco tipos não são uma escala de verdade: previsão e opinião não são piores que o fato, pedem outra pergunta. E “alguém disse” não é “aconteceu”: até um fato precisa ser conferido.",
         naProva:
-          "Fique atento a textos que misturam fato, previsão e opinião no mesmo parágrafo. A questão pode pedir que você os separe.",
+          "Textos que misturam fato, previsão e opinião no mesmo parágrafo costumam pedir que você os separe.",
       },
       {
         id: "interesses",
         name: "INTERESSES",
         conceito:
-          "Interesse é o que uma pessoa, um grupo ou uma instituição busca obter, preservar ou proteger em uma decisão. Na mesma decisão podem aparecer interesses diferentes. Governo e oposição são papéis no processo político.",
+          "Interesse é o que uma pessoa, um grupo ou uma instituição busca obter, preservar ou proteger em uma decisão. É a ferramenta da Aula 14, agora aplicada a decisões políticas. Na mesma decisão, aparecem interesses diferentes.",
         penseAssim:
-          "Pergunte: quem participa dessa decisão e o que cada posição busca? Responda isso antes de perguntar se você concorda.",
+          "Liste as posições antes de julgá-las: quem participa dessa decisão e o que cada posição busca?",
         exemplo:
-          "Em uma obra pública, o comerciante do entorno quer movimento, o passageiro quer rapidez, a prefeitura quer cumprir o prazo e o fiscal quer que as regras sejam seguidas.",
+          "Numa obra pública, o comerciante quer movimento, o passageiro quer rapidez, a prefeitura quer cumprir o prazo e o fiscal quer que as regras sejam seguidas.",
         naoConfunda:
-          "Ter interesse não é agir de má-fé: fiscalizar e proteger direitos também são interesses. Identificar interesses é uma ferramenta de leitura, não uma acusação, e ajuda a entender posições, não a decidir quem é bom ou mau.",
+          "Ter interesse não é agir de má-fé: fiscalizar e proteger direitos também são interesses. Identificar interesses ajuda a entender posições, e não serve para acusar.",
         naProva:
-          "Fique atento a alternativas que atribuem a um grupo uma intenção que o texto não menciona.",
+          "Cuidado com alternativas que atribuem a um grupo uma intenção que o texto não menciona.",
       },
       {
         id: "efeitos",
         name: "EFEITOS",
         conceito:
-          "Efeito é o que muda, depois de uma decisão, na vida de pessoas e lugares. Os efeitos aparecem em escalas diferentes (bairro, cidade, estado, país) e em prazos diferentes. Um efeito prometido é uma expectativa. O efeito produzido precisa ser medido.",
+          "Efeito é o que muda na vida de pessoas e lugares depois de uma decisão. Aparece em escalas diferentes (bairro, cidade, estado, país) e em prazos diferentes. Efeito prometido é expectativa; efeito produzido precisa ser medido.",
         penseAssim:
-          "Pergunte: quem é afetado, onde e quando? E, se alguém fala em resultado: qual efeito está sendo medido, em qual período, em qual lugar e com qual evidência?",
+          "Quem é afetado, onde e quando? E, se alguém fala em resultado: qual efeito foi medido, em qual período, em qual lugar e com qual evidência?",
         exemplo:
           "A reforma de um terminal pode agilizar a viagem de quem usa o ônibus e, durante as obras, reduzir o movimento do comércio do entorno.",
         naoConfunda:
-          "Aprovar uma lei não prova que ela produziu efeito. Uma queda depois da lei não prova que a lei a causou: outras mudanças podem ter ocorrido no período. Um estudo é evidência, não sentença definitiva.",
+          "Aprovar uma lei não prova que ela produziu efeito. Uma queda depois da lei não prova que a lei a causou: outras mudanças podem ter ocorrido. Um estudo é evidência, não sentença.",
         naProva:
-          "Fique atento a enunciados que mostram uma queda ou um aumento depois de uma medida. A questão pode pedir que você reconheça a sequência sem afirmar a causa.",
+          "Quando o enunciado mostra uma queda ou um aumento depois de uma medida, a questão pode pedir que você reconheça a sequência sem afirmar a causa.",
       },
     ],
   },
@@ -237,28 +243,29 @@ export const aula15Content: LessonContent = {
         id: "medida-provisoria",
         title: "Da medida provisória à lei",
         content:
-          "A Medida Provisória 415, de 21 de janeiro de 2008, proibia a venda de bebidas alcoólicas em rodovias federais e acrescentava um dispositivo ao Código de Trânsito. Entrou em vigor na data da publicação, mas valia por até 120 dias: o Congresso precisava aprová-la nesse prazo, ou ela perderia a validade. Após apreciação pelo Congresso, foi convertida na Lei 11.705, de 19 de junho de 2008, com alterações e veto parcial. Foi essa lei que consolidou o marco mais amplo conhecido como Lei Seca, com regras também para quem dirige. O Executivo editou a MP e sancionou a lei; ao Congresso coube apreciá-la.",
-        flow: ["Editada", "Em vigor", "Apreciada pelo Congresso", "Convertida em lei"],
+          "A Medida Provisória 415, de 21 de janeiro de 2008, proibia a venda de bebidas alcoólicas em rodovias federais e acrescentava uma regra ao Código de Trânsito. Valia desde a publicação, mas por até 120 dias: nesse prazo, o Congresso precisava convertê-la em lei, ou ela perderia a validade. A conversão veio na Lei 11.705, de 19 de junho de 2008, com mudanças no texto e vetos do Executivo a alguns pontos. Essa lei, conhecida como Lei Seca, trouxe também regras para quem dirige. O Executivo editou a MP e sancionou a lei; ao Congresso coube decidir sobre ela.",
+        flow: ["Editada", "Em vigor", "No Congresso", "Convertida em lei"],
         highlight: "A MP vale antes de virar lei, e a lei pode sair diferente da MP.",
       },
       {
         id: "judiciario-e-nova-lei",
-        title: "O Judiciário interpreta, o Congresso muda o texto",
+        title: "Aconteceu depois, ou aconteceu por causa de?",
         content:
-          "Em março de 2012, o STJ consolidou, naquele contexto normativo, o entendimento de que o crime de embriaguez ao volante exigia bafômetro ou exame de sangue e de que o motorista não poderia ser obrigado a fazê-los, em razão do princípio da não autoincriminação. Em 20 de dezembro de 2012, a Lei 12.760 alterou o Código de Trânsito, e seu art. 306 passou a prever a verificação por teste de alcoolemia, exame clínico, perícia, vídeo, prova testemunhal ou outros meios de prova admitidos, com direito à contraprova. O projeto tramitava desde 2009, e ter ocorrido no mesmo ano não prova que uma coisa causou a outra.",
-        highlight: "Cada Poder decide uma parte da história.",
+          "Em março de 2012, o STJ decidiu que, para provar o crime de embriaguez ao volante, nos termos da lei da época, só valiam o bafômetro ou o exame de sangue. Em 20 de dezembro de 2012, a Lei 12.760 alterou o Código de Trânsito e passou a prever outros meios de prova, como perícia e prova testemunhal, com direito à contraprova. O projeto dessa lei existia desde 2009. A ordem dos fatos é clara: a decisão veio antes da lei. Dizer que a lei mudou por causa da decisão é uma interpretação, e precisa de registros do próprio projeto, como justificativas e pareceres.",
+        flow: ["Projeto apresentado (2009)", "Decisão do STJ (mar. 2012)", "Lei 12.760 (dez. 2012)", "Relação: precisa de registro"],
+        highlight: "A sequência mostra a ordem; o motivo exige registro.",
       },
       {
         id: "qual-efeito",
         title: "Qual efeito, em qual período, em qual lugar, com qual evidência?",
         content:
-          "“A lei funcionou?” é uma pergunta pequena para o tamanho do assunto. Um estudo de 2010, com dados do Sistema de Informações sobre Mortalidade, comparou os 12 meses antes da Lei 11.705 (julho de 2007 a junho de 2008) com os 12 meses depois (julho de 2008 a junho de 2009) e observou queda de 7,4% na taxa de mortes no trânsito do país e de 11,8% nas capitais. Esse resultado, sozinho, não permite concluir que toda a mudança foi causada pela lei, e os autores recomendam outros estudos para avaliar melhor o impacto. Como na Aula 08, importam o dado, a fonte e o recorte.",
+          "“A lei funcionou?” é uma pergunta pequena para o tamanho do assunto. Um estudo de 2010 comparou os 12 meses antes da Lei 11.705 (julho de 2007 a junho de 2008) com os 12 meses depois (julho de 2008 a junho de 2009), com dados do Sistema de Informações sobre Mortalidade. A taxa de mortes por acidentes de trânsito caiu 7,4% no país e 11,8% nas capitais. Sozinho, esse resultado não mostra quanto da queda se deve à lei, e os autores recomendam outros estudos. Como na Aula 08, importam o dado, a fonte e o período comparado.",
         flow: ["Qual efeito", "Qual período", "Qual lugar", "Qual evidência"],
-        highlight: "Depois da lei não é o mesmo que por causa da lei.",
+        highlight: "Uma queda depois da lei ainda não é o efeito da lei.",
       },
     ],
     closing:
-      "Para ler o caso, as posições em jogo podem ser organizadas em categorias de análise: segurança viária, atividade econômica, fiscalização e direitos individuais. São categorias para ler o conflito, não declarações atribuídas a grupos. A aula acompanha o caso até 2012; o que veio depois não faz parte do percurso analisado.",
+      "Nesse caso, as posições podem ser lidas por categorias de análise: segurança viária, atividade econômica, fiscalização e direitos individuais. Não são falas de grupos. O caso termina em 2012; a contestação da lei no STF fica fora do recorte.",
   },
 
   brazilConnections: {
@@ -270,29 +277,29 @@ export const aula15Content: LessonContent = {
         id: "aula-13",
         label: "AULA 13: ONDE E POR QUE AQUI?",
         description:
-          "A medida provisória tratou de rodovias federais, parte da rede por onde o país circula. O estudo encontrou queda diferente no país e nas capitais. O lugar muda a leitura.",
+          "A queda observada foi de 7,4% no país e de 11,8% nas capitais: o mesmo período, medido em duas escalas, deu dois números. Ler o resultado exige dizer em que escala ele vale.",
       },
       {
         id: "aula-14",
         label: "AULA 14: DE QUE PROCESSO ISSO FAZ PARTE?",
         description:
-          "A Lei Seca não foi um ponto isolado. O Código de Trânsito, de 1997, foi alterado pelas leis de 2008 e de 2012. Cada mudança é um capítulo de uma história mais longa.",
+          "O Código de Trânsito, de 1997, foi alterado pela Lei Seca, em 2008, e pela Lei 12.760, em 2012, cujo projeto é de 2009. Quem lê uma data vê um episódio; quem lê todas vê o processo.",
       },
       {
         id: "aula-15",
         label: "AULA 15: QUEM DECIDE E COMO AVALIAR O QUE SE DIZ?",
         description:
-          "O Executivo editou, o Congresso apreciou e converteu em lei, o STJ interpretou e o Congresso alterou o texto em 2012. Em cada etapa, dá para identificar posições diferentes e frases de tipos diferentes sobre o que a lei faria ou fez.",
+          "Cada etapa teve uma instituição: o Executivo editou a MP, o Congresso a converteu em lei, o STJ decidiu sobre a prova do crime e, em 2012, uma nova lei mudou o texto. Ler o caso é separar quem decidiu o quê, e em qual etapa.",
       },
       {
         id: "em-aberto",
         label: "O QUE CONTINUA EM ABERTO",
         description:
-          "Se a lei valeu a pena depende de evidências e de valores. As cinco perguntas organizam a conversa. Elas não decidem por você.",
+          "Se a lei valeu a pena depende de evidências e de valores. Essa discussão continua depois da aula, com as cinco perguntas na mão.",
       },
     ],
     study:
-      "As três leituras se somam. Pessoas com opiniões diferentes podem fazer as mesmas perguntas e chegar a conclusões diferentes. O que importa é que todas saibam do que estão falando.",
+      "As três leituras se somam. Grupos com interesses e prioridades diferentes podem avaliar a lei de modos diferentes, e isso é esperado. O que dá para verificar, como datas, textos de lei e o que o estudo mediu, não muda com a opinião.",
     highlight:
       "O território mostra onde. O processo mostra por quê. A instituição mostra quem pode agir.",
   },
@@ -304,7 +311,7 @@ export const aula15Content: LessonContent = {
     demandsTitle: "A questão cobra",
     demands: ["Quem decide e em qual etapa", "Tipo de afirmação", "Interesses em jogo", "Efeitos e escalas"],
     highlight:
-      "A prova não pede sua opinião política. Pede sua capacidade de analisar.",
+      "O enunciado costuma misturar instituição, etapa, fala e efeito. O trabalho é separar cada um.",
     guidingIntro: "Diante de um acontecimento político, pergunte:",
     guidingQuestions: [
       "Quem pode decidir isso, e em qual nível?",
@@ -318,36 +325,36 @@ export const aula15Content: LessonContent = {
   question: {
     id: "s05-a15-q01",
     statement:
-      "No estado fictício de Vale Seco, o governo estadual anunciou um programa de crédito para pequenos produtores da região Alto Rio. A Assembleia Legislativa aprovou o projeto. Um deputado estadual, autor do projeto, declarou que, com o programa, “a renda dos produtores vai dobrar”. O sindicato dos produtores do Alto Rio elogiou a iniciativa. Uma associação de moradores da região Costa Sul criticou a prioridade dada à outra região. Para formar uma opinião sobre o programa, a leitura mais adequada dessa situação é",
+      "No estado fictício de Vale Seco, o governo estadual enviou à Assembleia Legislativa um projeto de lei que cria um programa de crédito para pequenos produtores da região Alto Rio, a ser operado pelo banco do estado. A Assembleia aprovou o projeto. Um deputado estadual, que participou da votação, declarou: “O texto aprovado destina R$ 80 milhões ao crédito, e esse dinheiro eleva a renda dos produtores do Alto Rio.” O sindicato dos produtores do Alto Rio elogiou a medida; uma associação de moradores da região Costa Sul criticou a prioridade dada à outra região. Antes de formar uma opinião, a leitura mais bem sustentada pelas informações e pelos conceitos da aula é que",
     options: [
       {
         id: "A",
-        text: "tratar a aprovação como uma etapa do caminho, pois o programa depende de outras decisões para valer; a fala do deputado como um fato, pois quem escreveu o projeto conhece os efeitos que ele terá; e o elogio e a crítica como posições de grupos afetados de modos diferentes, pois revelam interesses sem medir efeitos.",
+        text: "a Assembleia decidiu o programa, e a etapa que ainda falta é a execução pelo banco do estado; por isso, a quantia citada pelo deputado se verifica na lei aprovada, ao passo que a alta da renda é uma expectativa, e o apoio do sindicato e a crítica da associação traduzem o que cada região deseja, e não o efeito alcançado.",
       },
       {
         id: "B",
-        text: "tratar a aprovação como o início do programa, pois o Legislativo é quem decide se ele passa a valer; a fala do deputado como uma previsão, pois trata do futuro e exige conferência com evidências; e o elogio e a crítica como posições de grupos afetados de modos diferentes, pois revelam interesses sem medir efeitos.",
+        text: "a Assembleia cumpriu uma etapa, e o programa ainda depende de decisões do governo estadual e do banco; por isso, o valor destinado pode ser conferido no texto aprovado, mas o aumento da renda é um efeito esperado, ainda não medido, e o elogio e a crítica mostram o que cada região espera, e não o que o programa produziu.",
       },
       {
         id: "C",
-        text: "tratar a aprovação como uma etapa do caminho, pois o programa depende de outras decisões para valer; a fala do deputado como uma previsão, pois trata do futuro e exige conferência com evidências; e o elogio e a crítica como posições de grupos afetados de modos diferentes, pois revelam interesses sem medir efeitos.",
+        text: "a aprovação na Assembleia define o programa, e as etapas que restam são de execução; por isso, a fala do deputado é uma previsão sobre o futuro, que pode ser conferida quando o programa estiver em funcionamento, e o elogio do sindicato e a crítica da associação indicam quem ganha e quem perde, o que mostra o efeito em cada região.",
       },
       {
         id: "D",
-        text: "tratar a aprovação como uma etapa do caminho, pois o programa depende de outras decisões para valer; a fala do deputado como uma previsão, pois trata do futuro e exige conferência com evidências; e o elogio e a crítica como medidas do efeito no estado, pois reúnem quem apoia e quem critica o programa em disputa.",
+        text: "falta a sanção do governador, e a partir dela o programa passa a valer e a produzir os efeitos prometidos; por isso, a fala do deputado é um fato, pois cita um valor que consta no texto aprovado, e as posições do sindicato e da associação indicam prioridades de cada região, e não resultados medidos.",
       },
       {
         id: "E",
-        text: "tratar a aprovação como o início do programa, pois o Legislativo é quem decide se ele passa a valer; a fala do deputado como um fato, pois quem escreveu o projeto conhece os efeitos que ele terá; e o elogio e a crítica como posições que se anulam, pois cada grupo defende o próprio interesse e o resultado é um empate.",
+        text: "a aprovação é uma etapa cumprida, e outras instituições ainda precisam decidir antes de o crédito chegar aos produtores; por isso, a declaração do deputado é uma previsão, que poderá ser avaliada depois que o programa funcionar, e o elogio e a crítica revelam as prioridades de cada região, e não resultados.",
       },
     ],
-    correctOptionId: "C",
+    correctOptionId: "B",
     explanation:
-      "A alternativa C está correta, porque exige três leituras ao mesmo tempo. Primeiro, a aprovação na Assembleia é uma etapa do caminho: ainda podem faltar passos, como a sanção e a regulamentação, até o programa funcionar e produzir efeito. Segundo, a frase do deputado é uma previsão: fala do futuro e precisa de evidências que possam ser conferidas, e o fato de vir do autor do projeto não a transforma em fato. Terceiro, o elogio do sindicato e a crítica da associação mostram interesses de grupos afetados de modos diferentes, mas não medem o efeito do programa no estado. Cada outra alternativa erra em pelo menos um desses pontos. A trata a fala do autor como fato. B confunde aprovação com início do programa. D toma duas manifestações como medida do efeito no estado. E soma três erros: confunde aprovação com início, trata a fala do autor como fato e supõe que interesses diferentes se anulam, quando identificar interesses é o ponto de partida para entender as posições.",
+      "A alternativa B está correta, porque combina quatro leituras. Competência e caminho: a Assembleia cumpriu uma etapa, mas a aprovação legislativa ainda não significa que o programa esteja em execução: há etapas institucionais posteriores, como a sanção, e o crédito depende do banco; por isso, o efeito ainda não foi produzido. Afirmação: a fala do deputado junta o valor destinado, que se confere no texto aprovado, e o aumento da renda, que é um efeito esperado. Interesses e efeitos: elogio e crítica mostram o que cada região espera, não o que o programa produziu. A e C dão a decisão por encerrada. C, além disso, trata a fala toda como previsão e as posições como efeito. D confunde entrar em vigor com produzir efeito e toma a fala por fato. E trata a fala toda como previsão, embora o valor se confira.",
   },
 
   missionCheck:
-    "Voltemos à pergunta do início: como analisar um acontecimento político antes de decidir o que pensar sobre ele? Agora você consegue perguntar quem pode decidir, por qual caminho a decisão passa, que posições estão em jogo, que tipo de afirmação está sendo feita e quem será afetado, antes de perguntar de que lado está?",
+    "Voltemos à pergunta desta aula: como analisar um acontecimento político antes de decidir o que pensar sobre ele? Agora você consegue perguntar quem pode decidir, por qual caminho a decisão passa, que posições estão em jogo, que tipo de afirmação está sendo feita e quem será afetado?",
 
   completionMessage:
     "Antes de decidir o que pensar, pergunte quem decide, por qual caminho, com que interesses, o que se afirma e quem será afetado. As cinco perguntas não escolhem por você. Deixam sua escolha mais bem informada.",
