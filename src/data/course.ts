@@ -393,11 +393,8 @@ const semana04: Week = makeWeek({
 /* SEMANA 05 — BRASIL EM REVISÃO                                       */
 /* ------------------------------------------------------------------ */
 /**
- * Conteúdo das Aulas 13 a 15 já versionado, mas a semana ainda é futura no
- * cronograma: as três aulas ficam `"em-preparacao"` (o site exibe "Conteúdo
- * em preparação") até a liberação, quando bastará trocar o status para
- * `"publicada"`. Sem videoaula por enquanto (`videoUrl: null`). Checkpoint 05
- * também em preparação (sem `content`, sem `href`).
+ * Aulas 13, 14 e 15 publicadas com suas videoaulas.
+ * O Checkpoint 05 permanece em preparação (sem `content`, sem `href`).
  */
 
 const semana05: Week = makeWeek({
@@ -412,8 +409,9 @@ const semana05: Week = makeWeek({
       pillar: "geografia",
       title: "BRASIL EM REVISÃO: COMO LER O TERRITÓRIO BRASILEIRO",
       subtitle: "Sete lentes para interpretar um país desigual e integrado.",
-      videoUrl: null,
-      status: "em-preparacao",
+      videoUrl: "https://youtu.be/0IVXj7iKHbQ",
+      videoTitle: "Vídeo — Aula 13: Como Ler o Território Brasileiro",
+      status: "publicada",
       content: aula13Content,
     }),
     makeLesson({
@@ -422,8 +420,9 @@ const semana05: Week = makeWeek({
       pillar: "geopolitica",
       title: "BRASIL NAS NOTÍCIAS: DO ACONTECIMENTO AO PROCESSO",
       subtitle: "Como transformar a manchete em leitura geográfica.",
-      videoUrl: null,
-      status: "em-preparacao",
+      videoUrl: "https://youtu.be/s9ws1VlOXy8",
+      videoTitle: "Vídeo — Aula 14: Brasil nas Notícias",
+      status: "publicada",
       content: aula14Content,
     }),
     makeLesson({
@@ -432,8 +431,9 @@ const semana05: Week = makeWeek({
       pillar: "politica",
       title: "COMO INTERPRETAR A POLÍTICA BRASILEIRA SEM TRANSFORMÁ-LA EM TORCIDA",
       subtitle: "Instituições, interesses e decisões antes da opinião.",
-      videoUrl: null,
-      status: "em-preparacao",
+      videoUrl: "https://youtu.be/gPU_RG67J18",
+      videoTitle: "Vídeo — Aula 15: Política Brasileira sem Torcida",
+      status: "publicada",
       content: aula15Content,
     }),
   ],
