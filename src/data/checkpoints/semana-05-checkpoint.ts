@@ -29,7 +29,11 @@ export const checkpoint05Content: CheckpointContent = {
     title: "REGIÃO DE AROEIRA",
     description:
       "A Região de Aroeira é uma região fictícia brasileira formada por três municípios. Aroeira Central concentra hospitais, universidades, serviços públicos e comércio regional. Vale das Pedras depende fortemente da extração mineral e se liga ao restante da região por uma única rodovia. Porto Sereno abriga um terminal ferroviário e um porto fluvial que escoam parte da produção regional. O governo estadual anunciou o Projeto Corredor Aroeira, que prevê ampliar a ferrovia e criar uma linha de crédito, operada pelo banco estadual, para modernizar empresas ligadas ao corredor. A Assembleia Legislativa aprovou o projeto de lei que cria o programa, mas ainda existem etapas posteriores antes de o crédito chegar às empresas. No mesmo dia, um portal publicou a manchete: “Novo corredor vai transformar Aroeira e gerar 25 mil empregos”. O texto informa corretamente que a Assembleia aprovou o projeto e que há recursos previstos, mas o número de empregos é uma estimativa apresentada pelo governo. Empresários exportadores apoiam a proposta; comerciantes de Vale das Pedras esperam mais movimento; moradores próximos à ferrovia pedem informações sobre ruído e desapropriações; e uma associação regional questiona se os benefícios chegarão aos três municípios. Ao mesmo tempo, um grande comprador estrangeiro passou a exigir comprovação de origem dos produtos, e empresas locais avaliam adaptar seus sistemas e buscar novos mercados. Nenhum desses elementos, isoladamente, permite dizer se o projeto dará certo: eles permitem analisar território, processo, instituições, afirmações, interesses e efeitos.",
-    image: null,
+    image: {
+      src: "/assets/checkpoints/semana-05-aroeira.png",
+      alt: "Infográfico ilustrado da Região de Aroeira com os municípios de Aroeira Central, Vale das Pedras e Porto Sereno, o traçado do Projeto Corredor Aroeira, os fluxos de minério, pessoas, insumos e exportação, a manchete sobre 25 mil empregos, os atores envolvidos, as etapas pendentes e a exigência de rastreabilidade do mercado externo.",
+      caption: "Cenário fictício criado para fins didáticos. Observe os municípios, os fluxos, a manchete, os atores e as etapas pendentes antes de responder.",
+    },
   },
 
   steps: [
