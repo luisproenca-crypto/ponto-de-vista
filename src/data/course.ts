@@ -25,6 +25,7 @@ import { aula12Content } from "@/data/lessons/semana-04-aula-12";
 import { aula13Content } from "@/data/lessons/semana-05-aula-13";
 import { aula14Content } from "@/data/lessons/semana-05-aula-14";
 import { aula15Content } from "@/data/lessons/semana-05-aula-15";
+import { checkpoint05Content } from "@/data/checkpoints/semana-05-checkpoint";
 
 /**
  * ===================================================================
@@ -394,7 +395,8 @@ const semana04: Week = makeWeek({
 /* ------------------------------------------------------------------ */
 /**
  * Aulas 13, 14 e 15 publicadas com suas videoaulas.
- * O Checkpoint 05 permanece em preparação (sem `content`, sem `href`).
+ * O conteúdo do Checkpoint 05 está cadastrado para revisão, mas ele continua
+ * em preparação até a aprovação editorial e a integração da arte do cenário.
  */
 
 const semana05: Week = makeWeek({
@@ -437,7 +439,11 @@ const semana05: Week = makeWeek({
       content: aula15Content,
     }),
   ],
-  checkpoint: makeCheckpoint(5),
+  checkpoint: {
+    ...makeCheckpoint(5),
+    href: checkpointHref(makeCheckpoint(5)),
+    content: checkpoint05Content,
+  },
 });
 
 /* ------------------------------------------------------------------ */
