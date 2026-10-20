@@ -447,14 +447,116 @@ const semana05: Week = makeWeek({
 });
 
 /* ------------------------------------------------------------------ */
-/* SEMANAS 06 a 10 — estrutura editável                                 */
+/* SEMANA 06 — CLIMA, ENERGIA E PODER                                  */
+/* ------------------------------------------------------------------ */
+/**
+ * Estrutura cadastrada: títulos e subtítulos das Aulas 16, 17 e 18.
+ * Aulas e Checkpoint 06 em preparação (sem vídeo, sem `content`, sem `href`).
+ */
+
+const semana06: Week = makeWeek({
+  number: 6,
+  title: "CLIMA, ENERGIA E PODER",
+  description:
+    "Uma semana para compreender como clima, energia, território e decisões políticas se relacionam — e por que os impactos ambientais nunca são apenas naturais.",
+  lessons: [
+    makeLesson({
+      weekNumber: 6,
+      number: 16,
+      pillar: "geografia",
+      title: "CLIMA E MUDANÇAS CLIMÁTICAS",
+      subtitle: "O clima é natural; seus impactos também são?",
+      videoUrl: null,
+      videoTitle: null,
+      status: "em-preparacao",
+      content: null,
+    }),
+    makeLesson({
+      weekNumber: 6,
+      number: 17,
+      pillar: "geopolitica",
+      title: "ENERGIA, TRANSIÇÃO E GEOPOLÍTICA",
+      subtitle: "Mudar a matriz energética muda também as relações de poder.",
+      videoUrl: null,
+      videoTitle: null,
+      status: "em-preparacao",
+      content: null,
+    }),
+    makeLesson({
+      weekNumber: 6,
+      number: 18,
+      pillar: "politica",
+      title: "GOVERNANÇA AMBIENTAL E POLÍTICAS PÚBLICAS",
+      subtitle: "Quem decide quando o problema ultrapassa fronteiras?",
+      videoUrl: null,
+      videoTitle: null,
+      status: "em-preparacao",
+      content: null,
+    }),
+  ],
+  checkpoint: makeCheckpoint(6),
+});
+
+/* ------------------------------------------------------------------ */
+/* SEMANA 07 — PRODUÇÃO, REDES E DESIGUALDADES                         */
+/* ------------------------------------------------------------------ */
+/**
+ * Estrutura cadastrada: títulos e subtítulos das Aulas 19, 20 e 21.
+ * Aulas e Checkpoint 07 em preparação (sem vídeo, sem `content`, sem `href`).
+ */
+
+const semana07: Week = makeWeek({
+  number: 7,
+  title: "PRODUÇÃO, REDES E DESIGUALDADES",
+  description:
+    "Uma semana para compreender como produção, trabalho, comércio, infraestrutura e políticas públicas organizam redes e produzem desigualdades no território.",
+  lessons: [
+    makeLesson({
+      weekNumber: 7,
+      number: 19,
+      pillar: "geografia",
+      title: "INDÚSTRIA, AGROPECUÁRIA E MUNDO DO TRABALHO",
+      subtitle: "Produzir também é transformar territórios.",
+      videoUrl: null,
+      videoTitle: null,
+      status: "em-preparacao",
+      content: null,
+    }),
+    makeLesson({
+      weekNumber: 7,
+      number: 20,
+      pillar: "geopolitica",
+      title: "CADEIAS GLOBAIS, COMÉRCIO E RECURSOS ESTRATÉGICOS",
+      subtitle: "De onde vem, por onde passa e quem controla?",
+      videoUrl: null,
+      videoTitle: null,
+      status: "em-preparacao",
+      content: null,
+    }),
+    makeLesson({
+      weekNumber: 7,
+      number: 21,
+      pillar: "politica",
+      title: "DESIGUALDADE, POLÍTICAS PÚBLICAS E CIDADANIA",
+      subtitle: "Desigualdade é apenas diferença de renda?",
+      videoUrl: null,
+      videoTitle: null,
+      status: "em-preparacao",
+      content: null,
+    }),
+  ],
+  checkpoint: makeCheckpoint(7),
+});
+
+/* ------------------------------------------------------------------ */
+/* SEMANAS 08 a 10 — estrutura editável                                 */
 /* ------------------------------------------------------------------ */
 /**
  * Para cadastrar uma semana, basta preencher `title` e trocar `lessons: []`
  * por `lessons: makeDefaultLessons(N)` (e depois editar cada aula).
  */
 
-const semanasFuturas: Week[] = [6, 7, 8, 9, 10].map((number) =>
+const semanasFuturas: Week[] = [8, 9, 10].map((number) =>
   makeWeek({
     number,
     title: null,
@@ -474,6 +576,8 @@ export const course: Week[] = [
   semana03,
   semana04,
   semana05,
+  semana06,
+  semana07,
   ...semanasFuturas,
 ];
 
