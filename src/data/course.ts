@@ -26,6 +26,9 @@ import { aula13Content } from "@/data/lessons/semana-05-aula-13";
 import { aula14Content } from "@/data/lessons/semana-05-aula-14";
 import { aula15Content } from "@/data/lessons/semana-05-aula-15";
 import { checkpoint05Content } from "@/data/checkpoints/semana-05-checkpoint";
+import { aula16Content } from "@/data/lessons/semana-06-aula-16";
+import { aula17Content } from "@/data/lessons/semana-06-aula-17";
+import { aula18Content } from "@/data/lessons/semana-06-aula-18";
 
 /**
  * ===================================================================
@@ -450,8 +453,8 @@ const semana05: Week = makeWeek({
 /* SEMANA 06 — CLIMA, ENERGIA E PODER                                  */
 /* ------------------------------------------------------------------ */
 /**
- * Estrutura cadastrada: títulos e subtítulos das Aulas 16, 17 e 18.
- * Aulas e Checkpoint 06 em preparação (sem vídeo, sem `content`, sem `href`).
+ * Aulas 16, 17 e 18 publicadas com suas videoaulas.
+ * O Checkpoint 06 permanece em preparação (sem `content`, sem `href`).
  */
 
 const semana06: Week = makeWeek({
@@ -466,10 +469,10 @@ const semana06: Week = makeWeek({
       pillar: "geografia",
       title: "CLIMA E MUDANÇAS CLIMÁTICAS",
       subtitle: "O clima é natural; seus impactos também são?",
-      videoUrl: null,
-      videoTitle: null,
-      status: "em-preparacao",
-      content: null,
+      videoUrl: "https://youtu.be/gopS8PoQ5PM",
+      videoTitle: "Vídeo — Aula 16: Clima e Mudanças Climáticas",
+      status: "publicada",
+      content: aula16Content,
     }),
     makeLesson({
       weekNumber: 6,
@@ -477,10 +480,10 @@ const semana06: Week = makeWeek({
       pillar: "geopolitica",
       title: "ENERGIA, TRANSIÇÃO E GEOPOLÍTICA",
       subtitle: "Mudar a matriz energética muda também as relações de poder.",
-      videoUrl: null,
-      videoTitle: null,
-      status: "em-preparacao",
-      content: null,
+      videoUrl: "https://youtu.be/34mdcI_s1oc",
+      videoTitle: "Vídeo — Aula 17: Energia, Transição e Geopolítica",
+      status: "publicada",
+      content: aula17Content,
     }),
     makeLesson({
       weekNumber: 6,
@@ -488,10 +491,10 @@ const semana06: Week = makeWeek({
       pillar: "politica",
       title: "GOVERNANÇA AMBIENTAL E POLÍTICAS PÚBLICAS",
       subtitle: "Quem decide quando o problema ultrapassa fronteiras?",
-      videoUrl: null,
-      videoTitle: null,
-      status: "em-preparacao",
-      content: null,
+      videoUrl: "https://youtu.be/IgL_GQfDQ2Q",
+      videoTitle: "Vídeo — Aula 18: Governança Ambiental e Políticas Públicas",
+      status: "publicada",
+      content: aula18Content,
     }),
   ],
   checkpoint: makeCheckpoint(6),
