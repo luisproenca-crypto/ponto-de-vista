@@ -29,6 +29,7 @@ import { checkpoint05Content } from "@/data/checkpoints/semana-05-checkpoint";
 import { aula16Content } from "@/data/lessons/semana-06-aula-16";
 import { aula17Content } from "@/data/lessons/semana-06-aula-17";
 import { aula18Content } from "@/data/lessons/semana-06-aula-18";
+import { checkpoint06Content } from "@/data/checkpoints/semana-06-checkpoint";
 
 /**
  * ===================================================================
@@ -454,7 +455,7 @@ const semana05: Week = makeWeek({
 /* ------------------------------------------------------------------ */
 /**
  * Aulas 16, 17 e 18 publicadas com suas videoaulas.
- * O Checkpoint 06 permanece em preparação (sem `content`, sem `href`).
+ * Checkpoint 06 publicado (Região de Serra do Cedro).
  */
 
 const semana06: Week = makeWeek({
@@ -497,7 +498,12 @@ const semana06: Week = makeWeek({
       content: aula18Content,
     }),
   ],
-  checkpoint: makeCheckpoint(6),
+  checkpoint: {
+    ...makeCheckpoint(6),
+    status: "publicada",
+    href: checkpointHref(makeCheckpoint(6)),
+    content: checkpoint06Content,
+  },
 });
 
 /* ------------------------------------------------------------------ */
