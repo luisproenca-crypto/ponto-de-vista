@@ -30,6 +30,10 @@ import { aula16Content } from "@/data/lessons/semana-06-aula-16";
 import { aula17Content } from "@/data/lessons/semana-06-aula-17";
 import { aula18Content } from "@/data/lessons/semana-06-aula-18";
 import { checkpoint06Content } from "@/data/checkpoints/semana-06-checkpoint";
+import { aula19Content } from "@/data/lessons/semana-07-aula-19";
+import { aula20Content } from "@/data/lessons/semana-07-aula-20";
+import { aula21Content } from "@/data/lessons/semana-07-aula-21";
+import { checkpoint07Content } from "@/data/checkpoints/semana-07-checkpoint";
 
 /**
  * ===================================================================
@@ -510,8 +514,8 @@ const semana06: Week = makeWeek({
 /* SEMANA 07 — PRODUÇÃO, REDES E DESIGUALDADES                         */
 /* ------------------------------------------------------------------ */
 /**
- * Estrutura cadastrada: títulos e subtítulos das Aulas 19, 20 e 21.
- * Aulas e Checkpoint 07 em preparação (sem vídeo, sem `content`, sem `href`).
+ * Aulas 19, 20 e 21 publicadas com suas videoaulas.
+ * Checkpoint 07 publicado (Região de Campo Âmbar).
  */
 
 const semana07: Week = makeWeek({
@@ -526,10 +530,10 @@ const semana07: Week = makeWeek({
       pillar: "geografia",
       title: "INDÚSTRIA, AGROPECUÁRIA E MUNDO DO TRABALHO",
       subtitle: "Produzir também é transformar territórios.",
-      videoUrl: null,
-      videoTitle: null,
-      status: "em-preparacao",
-      content: null,
+      videoUrl: "https://youtu.be/1UkeskN_ZVk",
+      videoTitle: "Vídeo — Aula 19: Indústria, Agropecuária e Mundo do Trabalho",
+      status: "publicada",
+      content: aula19Content,
     }),
     makeLesson({
       weekNumber: 7,
@@ -537,10 +541,10 @@ const semana07: Week = makeWeek({
       pillar: "geopolitica",
       title: "CADEIAS GLOBAIS, COMÉRCIO E RECURSOS ESTRATÉGICOS",
       subtitle: "De onde vem, por onde passa e quem controla?",
-      videoUrl: null,
-      videoTitle: null,
-      status: "em-preparacao",
-      content: null,
+      videoUrl: "https://youtu.be/qekjj_VkZGM",
+      videoTitle: "Vídeo — Aula 20: Cadeias Globais, Comércio e Recursos Estratégicos",
+      status: "publicada",
+      content: aula20Content,
     }),
     makeLesson({
       weekNumber: 7,
@@ -548,13 +552,18 @@ const semana07: Week = makeWeek({
       pillar: "politica",
       title: "DESIGUALDADE, POLÍTICAS PÚBLICAS E CIDADANIA",
       subtitle: "Desigualdade é apenas diferença de renda?",
-      videoUrl: null,
-      videoTitle: null,
-      status: "em-preparacao",
-      content: null,
+      videoUrl: "https://youtu.be/wy7Y1f4sVSA",
+      videoTitle: "Vídeo — Aula 21: Desigualdade, Políticas Públicas e Cidadania",
+      status: "publicada",
+      content: aula21Content,
     }),
   ],
-  checkpoint: makeCheckpoint(7),
+  checkpoint: {
+    ...makeCheckpoint(7),
+    status: "publicada",
+    href: checkpointHref(makeCheckpoint(7)),
+    content: checkpoint07Content,
+  },
 });
 
 /* ------------------------------------------------------------------ */
