@@ -34,6 +34,7 @@ import { aula19Content } from "@/data/lessons/semana-07-aula-19";
 import { aula20Content } from "@/data/lessons/semana-07-aula-20";
 import { aula21Content } from "@/data/lessons/semana-07-aula-21";
 import { checkpoint07Content } from "@/data/checkpoints/semana-07-checkpoint";
+import { aula22Content } from "@/data/lessons/semana-08-aula-22";
 
 /**
  * ===================================================================
@@ -567,14 +568,68 @@ const semana07: Week = makeWeek({
 });
 
 /* ------------------------------------------------------------------ */
-/* SEMANAS 08 a 10 — estrutura editável                                 */
+/* SEMANA 08 — A NATUREZA EM MOVIMENTO                                 */
+/* ------------------------------------------------------------------ */
+/**
+ * Publicação parcial: Aula 22 publicada com sua videoaula.
+ * Aulas 23 e 24 e Checkpoint 08 em preparação (sem vídeo, sem `content`,
+ * sem `href`). Os arquivos de conteúdo já versionados
+ * (`semana-08-aula-23.ts`, `semana-08-aula-24.ts`,
+ * `semana-08-checkpoint.ts`) só serão importados aqui na publicação.
+ */
+
+const semana08: Week = makeWeek({
+  number: 8,
+  title: "A NATUREZA EM MOVIMENTO",
+  description:
+    "Como processos que acontecem em tempos e escalas diferentes constroem as paisagens que ocupamos?",
+  lessons: [
+    makeLesson({
+      weekNumber: 8,
+      number: 22,
+      pillar: "geografia",
+      title: "RELEVO, ROCHAS E SOLOS",
+      subtitle: "A paisagem é uma história em movimento?",
+      videoUrl: "https://youtu.be/Slt493ZFwsA",
+      videoTitle: "Vídeo — Aula 22: Relevo, Rochas e Solos",
+      status: "publicada",
+      content: aula22Content,
+    }),
+    makeLesson({
+      weekNumber: 8,
+      number: 23,
+      pillar: "geopolitica",
+      title: "ÁGUA NO TERRITÓRIO",
+      subtitle: "Onde começa e onde termina um problema?",
+      videoUrl: null,
+      videoTitle: null,
+      status: "em-preparacao",
+      content: null,
+    }),
+    makeLesson({
+      weekNumber: 8,
+      number: 24,
+      pillar: "politica",
+      title: "CLIMA, BIOMAS E DOMÍNIOS",
+      subtitle: "Por que as paisagens são tão diferentes?",
+      videoUrl: null,
+      videoTitle: null,
+      status: "em-preparacao",
+      content: null,
+    }),
+  ],
+  checkpoint: makeCheckpoint(8),
+});
+
+/* ------------------------------------------------------------------ */
+/* SEMANAS 09 e 10 — estrutura editável                                 */
 /* ------------------------------------------------------------------ */
 /**
  * Para cadastrar uma semana, basta preencher `title` e trocar `lessons: []`
  * por `lessons: makeDefaultLessons(N)` (e depois editar cada aula).
  */
 
-const semanasFuturas: Week[] = [8, 9, 10].map((number) =>
+const semanasFuturas: Week[] = [9, 10].map((number) =>
   makeWeek({
     number,
     title: null,
@@ -596,6 +651,7 @@ export const course: Week[] = [
   semana05,
   semana06,
   semana07,
+  semana08,
   ...semanasFuturas,
 ];
 
