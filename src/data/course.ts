@@ -35,6 +35,7 @@ import { aula20Content } from "@/data/lessons/semana-07-aula-20";
 import { aula21Content } from "@/data/lessons/semana-07-aula-21";
 import { checkpoint07Content } from "@/data/checkpoints/semana-07-checkpoint";
 import { aula22Content } from "@/data/lessons/semana-08-aula-22";
+import { aula23Content } from "@/data/lessons/semana-08-aula-23";
 
 /**
  * ===================================================================
@@ -571,11 +572,11 @@ const semana07: Week = makeWeek({
 /* SEMANA 08 — A NATUREZA EM MOVIMENTO                                 */
 /* ------------------------------------------------------------------ */
 /**
- * Publicação parcial: Aula 22 publicada com sua videoaula.
- * Aulas 23 e 24 e Checkpoint 08 em preparação (sem vídeo, sem `content`,
+ * Publicação parcial: Aulas 22 e 23 publicadas com suas videoaulas.
+ * Aula 24 e Checkpoint 08 em preparação (sem vídeo, sem `content`,
  * sem `href`). Os arquivos de conteúdo já versionados
- * (`semana-08-aula-23.ts`, `semana-08-aula-24.ts`,
- * `semana-08-checkpoint.ts`) só serão importados aqui na publicação.
+ * (`semana-08-aula-24.ts`, `semana-08-checkpoint.ts`) só serão
+ * importados aqui na publicação.
  */
 
 const semana08: Week = makeWeek({
@@ -601,10 +602,10 @@ const semana08: Week = makeWeek({
       pillar: "geopolitica",
       title: "ÁGUA NO TERRITÓRIO",
       subtitle: "Onde começa e onde termina um problema?",
-      videoUrl: null,
-      videoTitle: null,
-      status: "em-preparacao",
-      content: null,
+      videoUrl: "https://youtu.be/3rWB9w-LENw",
+      videoTitle: "Vídeo — Aula 23: Água no Território",
+      status: "publicada",
+      content: aula23Content,
     }),
     makeLesson({
       weekNumber: 8,
