@@ -36,6 +36,8 @@ import { aula21Content } from "@/data/lessons/semana-07-aula-21";
 import { checkpoint07Content } from "@/data/checkpoints/semana-07-checkpoint";
 import { aula22Content } from "@/data/lessons/semana-08-aula-22";
 import { aula23Content } from "@/data/lessons/semana-08-aula-23";
+import { aula24Content } from "@/data/lessons/semana-08-aula-24";
+import { checkpoint08Content } from "@/data/checkpoints/semana-08-checkpoint";
 
 /**
  * ===================================================================
@@ -572,11 +574,8 @@ const semana07: Week = makeWeek({
 /* SEMANA 08 — A NATUREZA EM MOVIMENTO                                 */
 /* ------------------------------------------------------------------ */
 /**
- * Publicação parcial: Aulas 22 e 23 publicadas com suas videoaulas.
- * Aula 24 e Checkpoint 08 em preparação (sem vídeo, sem `content`,
- * sem `href`). Os arquivos de conteúdo já versionados
- * (`semana-08-aula-24.ts`, `semana-08-checkpoint.ts`) só serão
- * importados aqui na publicação.
+ * Semana concluída: Aulas 22, 23 e 24 publicadas com suas videoaulas e
+ * Checkpoint 08 (Bacia do Rio Cambará) publicado.
  */
 
 const semana08: Week = makeWeek({
@@ -613,13 +612,18 @@ const semana08: Week = makeWeek({
       pillar: "politica",
       title: "CLIMA, BIOMAS E DOMÍNIOS",
       subtitle: "Por que as paisagens são tão diferentes?",
-      videoUrl: null,
-      videoTitle: null,
-      status: "em-preparacao",
-      content: null,
+      videoUrl: "https://youtu.be/wDJYM6gLUwE",
+      videoTitle: "Vídeo — Aula 24: Clima, Biomas e Domínios",
+      status: "publicada",
+      content: aula24Content,
     }),
   ],
-  checkpoint: makeCheckpoint(8),
+  checkpoint: {
+    ...makeCheckpoint(8),
+    status: "publicada",
+    href: checkpointHref(makeCheckpoint(8)),
+    content: checkpoint08Content,
+  },
 });
 
 /* ------------------------------------------------------------------ */
