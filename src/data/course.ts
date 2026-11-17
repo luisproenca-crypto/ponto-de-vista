@@ -38,6 +38,7 @@ import { aula22Content } from "@/data/lessons/semana-08-aula-22";
 import { aula23Content } from "@/data/lessons/semana-08-aula-23";
 import { aula24Content } from "@/data/lessons/semana-08-aula-24";
 import { checkpoint08Content } from "@/data/checkpoints/semana-08-checkpoint";
+import { aula25Content } from "@/data/lessons/semana-09-aula-25";
 
 /**
  * ===================================================================
@@ -627,14 +628,68 @@ const semana08: Week = makeWeek({
 });
 
 /* ------------------------------------------------------------------ */
-/* SEMANAS 09 e 10 — estrutura editável                                 */
+/* SEMANA 09 — FRONTEIRAS, FLUXOS E PERTENCIMENTO                      */
+/* ------------------------------------------------------------------ */
+/**
+ * Publicação parcial: Aula 25 publicada com sua videoaula.
+ * Aulas 26 e 27 e Checkpoint 09 em preparação (sem vídeo, sem `content`,
+ * sem `href`). Os arquivos de conteúdo já versionados
+ * (`semana-09-aula-26.ts`, `semana-09-aula-27.ts`,
+ * `semana-09-checkpoint.ts`) só serão importados aqui na publicação.
+ */
+
+const semana09: Week = makeWeek({
+  number: 9,
+  title: "FRONTEIRAS, FLUXOS E PERTENCIMENTO",
+  description:
+    "O que decide quem atravessa, quem permanece e quem pertence a um território?",
+  lessons: [
+    makeLesson({
+      weekNumber: 9,
+      number: 25,
+      pillar: "geografia",
+      title: "FRONTEIRAS, LIMITES E TERRITÓRIOS",
+      subtitle: "O que uma mesma fronteira faz com fluxos diferentes?",
+      videoUrl: "https://youtu.be/QSUmXu86870",
+      videoTitle: "Vídeo — Aula 25: Fronteiras, Limites e Territórios",
+      status: "publicada",
+      content: aula25Content,
+    }),
+    makeLesson({
+      weekNumber: 9,
+      number: 26,
+      pillar: "geopolitica",
+      title: "MOBILIDADES, MIGRAÇÕES E REFÚGIO",
+      subtitle: "O que molda o caminho de quem se desloca, e o que esse caminho transforma?",
+      videoUrl: null,
+      videoTitle: null,
+      status: "em-preparacao",
+      content: null,
+    }),
+    makeLesson({
+      weekNumber: 9,
+      number: 27,
+      pillar: "politica",
+      title: "CIDADANIA, IDENTIDADE E PERTENCIMENTO",
+      subtitle: "O que faz pessoas que vivem no mesmo lugar terem condições e vínculos diferentes com ele?",
+      videoUrl: null,
+      videoTitle: null,
+      status: "em-preparacao",
+      content: null,
+    }),
+  ],
+  checkpoint: makeCheckpoint(9),
+});
+
+/* ------------------------------------------------------------------ */
+/* SEMANA 10 — estrutura editável                                       */
 /* ------------------------------------------------------------------ */
 /**
  * Para cadastrar uma semana, basta preencher `title` e trocar `lessons: []`
  * por `lessons: makeDefaultLessons(N)` (e depois editar cada aula).
  */
 
-const semanasFuturas: Week[] = [9, 10].map((number) =>
+const semanasFuturas: Week[] = [10].map((number) =>
   makeWeek({
     number,
     title: null,
@@ -657,6 +712,7 @@ export const course: Week[] = [
   semana06,
   semana07,
   semana08,
+  semana09,
   ...semanasFuturas,
 ];
 
