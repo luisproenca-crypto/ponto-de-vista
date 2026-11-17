@@ -39,6 +39,7 @@ import { aula23Content } from "@/data/lessons/semana-08-aula-23";
 import { aula24Content } from "@/data/lessons/semana-08-aula-24";
 import { checkpoint08Content } from "@/data/checkpoints/semana-08-checkpoint";
 import { aula25Content } from "@/data/lessons/semana-09-aula-25";
+import { aula26Content } from "@/data/lessons/semana-09-aula-26";
 
 /**
  * ===================================================================
@@ -631,11 +632,11 @@ const semana08: Week = makeWeek({
 /* SEMANA 09 — FRONTEIRAS, FLUXOS E PERTENCIMENTO                      */
 /* ------------------------------------------------------------------ */
 /**
- * Publicação parcial: Aula 25 publicada com sua videoaula.
- * Aulas 26 e 27 e Checkpoint 09 em preparação (sem vídeo, sem `content`,
+ * Publicação parcial: Aulas 25 e 26 publicadas com suas videoaulas.
+ * Aula 27 e Checkpoint 09 em preparação (sem vídeo, sem `content`,
  * sem `href`). Os arquivos de conteúdo já versionados
- * (`semana-09-aula-26.ts`, `semana-09-aula-27.ts`,
- * `semana-09-checkpoint.ts`) só serão importados aqui na publicação.
+ * (`semana-09-aula-27.ts`, `semana-09-checkpoint.ts`) só serão
+ * importados aqui na publicação.
  */
 
 const semana09: Week = makeWeek({
@@ -661,10 +662,10 @@ const semana09: Week = makeWeek({
       pillar: "geopolitica",
       title: "MOBILIDADES, MIGRAÇÕES E REFÚGIO",
       subtitle: "O que molda o caminho de quem se desloca, e o que esse caminho transforma?",
-      videoUrl: null,
-      videoTitle: null,
-      status: "em-preparacao",
-      content: null,
+      videoUrl: "https://youtu.be/hcW9uubn8vc",
+      videoTitle: "Vídeo — Aula 26: Mobilidades, Migrações e Refúgio",
+      status: "publicada",
+      content: aula26Content,
     }),
     makeLesson({
       weekNumber: 9,
