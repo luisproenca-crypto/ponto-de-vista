@@ -40,6 +40,8 @@ import { aula24Content } from "@/data/lessons/semana-08-aula-24";
 import { checkpoint08Content } from "@/data/checkpoints/semana-08-checkpoint";
 import { aula25Content } from "@/data/lessons/semana-09-aula-25";
 import { aula26Content } from "@/data/lessons/semana-09-aula-26";
+import { aula27Content } from "@/data/lessons/semana-09-aula-27";
+import { checkpoint09Content } from "@/data/checkpoints/semana-09-checkpoint";
 
 /**
  * ===================================================================
@@ -632,11 +634,8 @@ const semana08: Week = makeWeek({
 /* SEMANA 09 — FRONTEIRAS, FLUXOS E PERTENCIMENTO                      */
 /* ------------------------------------------------------------------ */
 /**
- * Publicação parcial: Aulas 25 e 26 publicadas com suas videoaulas.
- * Aula 27 e Checkpoint 09 em preparação (sem vídeo, sem `content`,
- * sem `href`). Os arquivos de conteúdo já versionados
- * (`semana-09-aula-27.ts`, `semana-09-checkpoint.ts`) só serão
- * importados aqui na publicação.
+ * Semana completa: Aulas 25, 26 e 27 publicadas com suas videoaulas e
+ * Checkpoint 09 (cenário "Passo do Itaúba") publicado.
  */
 
 const semana09: Week = makeWeek({
@@ -673,13 +672,18 @@ const semana09: Week = makeWeek({
       pillar: "politica",
       title: "CIDADANIA, IDENTIDADE E PERTENCIMENTO",
       subtitle: "O que faz pessoas que vivem no mesmo lugar terem condições e vínculos diferentes com ele?",
-      videoUrl: null,
-      videoTitle: null,
-      status: "em-preparacao",
-      content: null,
+      videoUrl: "https://youtu.be/ClkKj6G6CBA",
+      videoTitle: "Vídeo — Aula 27: Cidadania, Identidade e Pertencimento",
+      status: "publicada",
+      content: aula27Content,
     }),
   ],
-  checkpoint: makeCheckpoint(9),
+  checkpoint: {
+    ...makeCheckpoint(9),
+    status: "publicada",
+    href: checkpointHref(makeCheckpoint(9)),
+    content: checkpoint09Content,
+  },
 });
 
 /* ------------------------------------------------------------------ */
