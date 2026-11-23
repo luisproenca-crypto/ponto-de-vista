@@ -66,8 +66,8 @@ export const aula28Content: LessonContent = {
     ],
     image: {
       src: "/assets/aulas/semana-10-aula-28-imperatriz.png",
-      alt: "Três mapas do Brasil lado a lado, com um mesmo marcador em Imperatriz, no oeste do Maranhão: no primeiro, as cinco macrorregiões do IBGE, com Imperatriz no Nordeste; no segundo, os três complexos geoeconômicos, com Imperatriz no complexo da Amazônia; no terceiro, as regiões hidrográficas, com Imperatriz na Região Hidrográfica Tocantins-Araguaia.",
-      caption: "Mapas esquemáticos criados para fins didáticos.",
+      alt: "Composição cartográfica conceitual, sobre fundo escuro, com um marcador laranja em Imperatriz, no Maranhão, e três camadas territoriais sobrepostas, representando critérios distintos de regionalização: um mosaico de divisões de lados retos, manchas roxas que agrupam áreas semelhantes e uma rede de drenagem verde que converge para o mesmo ponto.",
+      caption: "Composição conceitual criada para fins didáticos; não representa limites reais.",
     },
     questions: [
       "Imperatriz não se mexeu. Em qual região ela está?",

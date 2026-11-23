@@ -42,6 +42,7 @@ import { aula25Content } from "@/data/lessons/semana-09-aula-25";
 import { aula26Content } from "@/data/lessons/semana-09-aula-26";
 import { aula27Content } from "@/data/lessons/semana-09-aula-27";
 import { checkpoint09Content } from "@/data/checkpoints/semana-09-checkpoint";
+import { aula28Content } from "@/data/lessons/semana-10-aula-28";
 
 /**
  * ===================================================================
@@ -687,22 +688,58 @@ const semana09: Week = makeWeek({
 });
 
 /* ------------------------------------------------------------------ */
-/* SEMANA 10 — estrutura editável                                       */
+/* SEMANA 10 — O MUNDO EM RECORTES                                      */
 /* ------------------------------------------------------------------ */
 /**
- * Para cadastrar uma semana, basta preencher `title` e trocar `lessons: []`
- * por `lessons: makeDefaultLessons(N)` (e depois editar cada aula).
+ * Publicação parcial: Aula 28 publicada com sua videoaula.
+ * Aulas 29 e 30 e Checkpoint 10 em preparação (sem vídeo, sem `content`,
+ * sem `href`). Os arquivos de conteúdo já versionados
+ * (`semana-10-aula-29.ts`, `semana-10-aula-30.ts`,
+ * `semana-10-checkpoint.ts`) só serão importados aqui na publicação.
  */
 
-const semanasFuturas: Week[] = [10].map((number) =>
-  makeWeek({
-    number,
-    title: null,
-    description: null,
-    lessons: [],
-    checkpoint: null,
-  }),
-);
+const semana10: Week = makeWeek({
+  number: 10,
+  title: "O MUNDO EM RECORTES",
+  description:
+    "O que um recorte do espaço permite ver — e o que ele deixa de mostrar?",
+  lessons: [
+    makeLesson({
+      weekNumber: 10,
+      number: 28,
+      pillar: "geografia",
+      title: "REGIÕES, CRITÉRIOS E ESCALAS",
+      subtitle: "O que muda quando mudamos o critério?",
+      videoUrl: "https://youtu.be/WEm0I9GE12Q",
+      videoTitle: "Vídeo — Aula 28: Regiões, Critérios e Escalas",
+      status: "publicada",
+      content: aula28Content,
+    }),
+    makeLesson({
+      weekNumber: 10,
+      number: 29,
+      pillar: "geopolitica",
+      title: "CLASSIFICAR O MUNDO",
+      subtitle: "Quem agrupa os países, com que critério e para quê?",
+      videoUrl: null,
+      videoTitle: null,
+      status: "em-preparacao",
+      content: null,
+    }),
+    makeLesson({
+      weekNumber: 10,
+      number: 30,
+      pillar: "politica",
+      title: "DO RECORTE AO ARGUMENTO",
+      subtitle: "Como construir um argumento geográfico sem dizer mais do que as evidências permitem?",
+      videoUrl: null,
+      videoTitle: null,
+      status: "em-preparacao",
+      content: null,
+    }),
+  ],
+  checkpoint: makeCheckpoint(10),
+});
 
 /* ------------------------------------------------------------------ */
 /* Curso completo                                                      */
@@ -718,7 +755,7 @@ export const course: Week[] = [
   semana07,
   semana08,
   semana09,
-  ...semanasFuturas,
+  semana10,
 ];
 
 export const TOTAL_WEEKS = course.length;
