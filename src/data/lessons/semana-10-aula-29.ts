@@ -78,8 +78,8 @@ export const aula29Content: LessonContent = {
     ],
     image: {
       src: "/assets/aulas/semana-10-aula-29-classificacoes.png",
-      alt: "Três painéis sobre o Brasil: um planisfério com uma divisão entre países chamados de Norte e de Sul Global, com o Brasil no Sul; uma escala com quatro grupos de renda, com o Brasil no grupo de renda média-alta e a indicação “ano fiscal de 2027”; e um texto institucional indicando que, na OMC, os membros anunciam a própria condição de desenvolvidos ou em desenvolvimento.",
-      caption: "Painéis esquemáticos criados para fins didáticos.",
+      alt: "Composição conceitual, sobre fundo escuro, de um globo sem fronteiras com um mesmo território em destaque, sobre o qual incidem três mecanismos distintos de classificação: à esquerda, barras, faixas graduadas e um histograma de indicadores; à direita, um documento e etiquetas ligados por conexões institucionais; sobre o globo, grandes agrupamentos verdes e arcos de relações.",
+      caption: "Composição conceitual criada para fins didáticos; os agrupamentos não representam uma classificação oficial do mundo.",
     },
     questions: [
       "O país mudou, ou mudou quem o classificou e para quê?",

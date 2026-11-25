@@ -43,6 +43,7 @@ import { aula26Content } from "@/data/lessons/semana-09-aula-26";
 import { aula27Content } from "@/data/lessons/semana-09-aula-27";
 import { checkpoint09Content } from "@/data/checkpoints/semana-09-checkpoint";
 import { aula28Content } from "@/data/lessons/semana-10-aula-28";
+import { aula29Content } from "@/data/lessons/semana-10-aula-29";
 
 /**
  * ===================================================================
@@ -691,11 +692,11 @@ const semana09: Week = makeWeek({
 /* SEMANA 10 — O MUNDO EM RECORTES                                      */
 /* ------------------------------------------------------------------ */
 /**
- * Publicação parcial: Aula 28 publicada com sua videoaula.
- * Aulas 29 e 30 e Checkpoint 10 em preparação (sem vídeo, sem `content`,
+ * Publicação parcial: Aulas 28 e 29 publicadas com suas videoaulas.
+ * Aula 30 e Checkpoint 10 em preparação (sem vídeo, sem `content`,
  * sem `href`). Os arquivos de conteúdo já versionados
- * (`semana-10-aula-29.ts`, `semana-10-aula-30.ts`,
- * `semana-10-checkpoint.ts`) só serão importados aqui na publicação.
+ * (`semana-10-aula-30.ts`, `semana-10-checkpoint.ts`) só serão
+ * importados aqui na publicação.
  */
 
 const semana10: Week = makeWeek({
@@ -721,10 +722,10 @@ const semana10: Week = makeWeek({
       pillar: "geopolitica",
       title: "CLASSIFICAR O MUNDO",
       subtitle: "Quem agrupa os países, com que critério e para quê?",
-      videoUrl: null,
-      videoTitle: null,
-      status: "em-preparacao",
-      content: null,
+      videoUrl: "https://youtu.be/D9yxg3mwm7k",
+      videoTitle: "Vídeo — Aula 29: Classificar o Mundo",
+      status: "publicada",
+      content: aula29Content,
     }),
     makeLesson({
       weekNumber: 10,
