@@ -44,6 +44,7 @@ import { aula27Content } from "@/data/lessons/semana-09-aula-27";
 import { checkpoint09Content } from "@/data/checkpoints/semana-09-checkpoint";
 import { aula28Content } from "@/data/lessons/semana-10-aula-28";
 import { aula29Content } from "@/data/lessons/semana-10-aula-29";
+import { aula30Content } from "@/data/lessons/semana-10-aula-30";
 
 /**
  * ===================================================================
@@ -692,11 +693,10 @@ const semana09: Week = makeWeek({
 /* SEMANA 10 — O MUNDO EM RECORTES                                      */
 /* ------------------------------------------------------------------ */
 /**
- * Publicação parcial: Aulas 28 e 29 publicadas com suas videoaulas.
- * Aula 30 e Checkpoint 10 em preparação (sem vídeo, sem `content`,
- * sem `href`). Os arquivos de conteúdo já versionados
- * (`semana-10-aula-30.ts`, `semana-10-checkpoint.ts`) só serão
- * importados aqui na publicação.
+ * Publicação parcial: Aulas 28, 29 e 30 publicadas com suas videoaulas.
+ * Checkpoint 10 em preparação (sem `content`, sem `href`). O arquivo de
+ * conteúdo já versionado (`semana-10-checkpoint.ts`) só será importado
+ * aqui na publicação.
  */
 
 const semana10: Week = makeWeek({
@@ -733,10 +733,10 @@ const semana10: Week = makeWeek({
       pillar: "politica",
       title: "DO RECORTE AO ARGUMENTO",
       subtitle: "Como construir um argumento geográfico sem dizer mais do que as evidências permitem?",
-      videoUrl: null,
-      videoTitle: null,
-      status: "em-preparacao",
-      content: null,
+      videoUrl: "https://youtu.be/tXfb-6FrAnw",
+      videoTitle: "Vídeo — Aula 30: Do Recorte ao Argumento",
+      status: "publicada",
+      content: aula30Content,
     }),
   ],
   checkpoint: makeCheckpoint(10),

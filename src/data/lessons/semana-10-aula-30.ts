@@ -69,8 +69,8 @@ export const aula30Content: LessonContent = {
     ],
     image: {
       src: "/assets/aulas/semana-10-aula-30-amazonia.png",
-      alt: "Dois mapas do Brasil lado a lado. No primeiro, destacada, a Amazônia Legal, que abrange os estados da Região Norte, Mato Grosso e a parte do Maranhão a oeste do meridiano 44°W. No segundo, destacado, o Bioma Amazônia, com limites diferentes; parte da Amazônia Legal aparece em áreas de outros biomas, como Cerrado e Pantanal.",
-      caption: "Mapas esquemáticos criados para fins didáticos, com base em recortes do IBGE.",
+      alt: "Composição conceitual, sobre fundo escuro, com um território abstrato delimitado por dois recortes diferentes que se sobrepõem parcialmente — um contorno orgânico verde e um contorno poligonal roxo — e três tipos de evidência — mapa, dado e texto — cujas linhas convergem para uma única linha de argumento, em laranja.",
+      caption: "Composição conceitual criada para fins didáticos; os recortes e evidências representados não correspondem a dados ou limites reais.",
     },
     questions: [
       "Se os dois falam em Amazônia, por que os limites não são iguais?",
