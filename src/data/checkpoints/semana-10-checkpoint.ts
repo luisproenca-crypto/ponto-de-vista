@@ -58,9 +58,9 @@ export const checkpoint10Content: CheckpointContent = {
     image: {
       // Arquivo planejado: /public/assets/checkpoints/semana-10-nova-meridiana.png
       src: "/assets/checkpoints/semana-10-nova-meridiana.png",
-      alt: "Painel fictício da Região de Nova Meridiana. À esquerda, o mapa-base: a Serra do Arvoredo a oeste, com parte das cabeceiras no país vizinho Ametista; o Rio Tauá correndo para leste, com os afluentes Rio Lajedo e Ribeirão Juazal, até Porto das Garças; os limites das províncias de Campo Raso, Lumiar, Olaria e Barra Nova; as cidades de Jacarandá, Itaberá e Ventania; uma rodovia e uma ferrovia regional ligando Ventania a Porto das Garças; uma área irrigada perto de Itaberá e um distrito industrial em Porto das Garças. À direita, três miniaturas do mesmo território: a bacia do Tauá com a direção do fluxo, atravessando províncias e a fronteira com Ametista; a região de influência de Porto das Garças com setas de deslocamentos diários, incluindo Ventania; e faixas de maior, intermediário e menor acesso a serviços.",
+      alt: "Mapa fictício da Região de Nova Meridiana. À esquerda, o mapa-base: a Serra do Arvoredo a oeste, atravessada pela fronteira com o território vizinho Ametista; o Rio Tauá, que nasce na serra, com parte das cabeceiras em Ametista, e corre para leste, recebendo o Rio Lajedo e o Ribeirão Juazal, até Porto das Garças; os limites das províncias de Campo Raso, Lumiar, Olaria e Barra Nova; as cidades de Jacarandá, Itaberá e Ventania; rodovias, uma ferrovia que liga Ventania a Porto das Garças, uma área irrigada perto de Itaberá e um distrito industrial em Porto das Garças. À direita, três miniaturas do mesmo território: a bacia do Rio Tauá, que atravessa a fronteira; a região de influência de Porto das Garças, com fluxos que incluem Ventania; e faixas de maior, intermediário e menor acesso a serviços.",
       caption:
-        "Cenário fictício criado para fins didáticos. As informações necessárias para responder estão no texto.",
+        "Nova Meridiana é um território fictício criado para o Checkpoint 10. Os limites, cidades, rios, fluxos e indicadores são didáticos e não correspondem a lugares reais.",
     },
   },
 

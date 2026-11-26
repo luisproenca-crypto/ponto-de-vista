@@ -45,6 +45,7 @@ import { checkpoint09Content } from "@/data/checkpoints/semana-09-checkpoint";
 import { aula28Content } from "@/data/lessons/semana-10-aula-28";
 import { aula29Content } from "@/data/lessons/semana-10-aula-29";
 import { aula30Content } from "@/data/lessons/semana-10-aula-30";
+import { checkpoint10Content } from "@/data/checkpoints/semana-10-checkpoint";
 
 /**
  * ===================================================================
@@ -693,10 +694,8 @@ const semana09: Week = makeWeek({
 /* SEMANA 10 — O MUNDO EM RECORTES                                      */
 /* ------------------------------------------------------------------ */
 /**
- * Publicação parcial: Aulas 28, 29 e 30 publicadas com suas videoaulas.
- * Checkpoint 10 em preparação (sem `content`, sem `href`). O arquivo de
- * conteúdo já versionado (`semana-10-checkpoint.ts`) só será importado
- * aqui na publicação.
+ * Semana completa: Aulas 28, 29 e 30 publicadas com suas videoaulas e
+ * Checkpoint 10 publicado (checkpoint final do curso).
  */
 
 const semana10: Week = makeWeek({
@@ -739,7 +738,12 @@ const semana10: Week = makeWeek({
       content: aula30Content,
     }),
   ],
-  checkpoint: makeCheckpoint(10),
+  checkpoint: {
+    ...makeCheckpoint(10),
+    status: "publicada",
+    href: checkpointHref(makeCheckpoint(10)),
+    content: checkpoint10Content,
+  },
 });
 
 /* ------------------------------------------------------------------ */
