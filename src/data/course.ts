@@ -461,6 +461,7 @@ const semana05: Week = makeWeek({
   ],
   checkpoint: {
     ...makeCheckpoint(5),
+    status: "publicada",
     href: checkpointHref(makeCheckpoint(5)),
     content: checkpoint05Content,
   },
